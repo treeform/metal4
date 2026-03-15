@@ -393,7 +393,8 @@ proc updateTransform(
     )
     target = vec3(0.0'f32, 0.0'f32, 0.0'f32)
     model = mat4()
-    cameraAngles = toAngles(eye, target)
+    baseAngles = toAngles(eye, target)
+    cameraAngles = vec3(baseAngles.x, baseAngles.y, 0.0'f32)
     view = inverse(translate(eye) * fromAngles(cameraAngles))
     proj = perspectiveMetal(60.0'f32.toRadians, aspect, 0.1'f32, 100.0'f32)
     mvp = proj * view * model
