@@ -1,6 +1,3 @@
-when not defined(macosx):
-  {.error: "metal4 only runs on macOS.".}
-
 import
   windy/platforms/macos/[macdefs, objc]
 
