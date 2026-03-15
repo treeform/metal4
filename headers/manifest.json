@@ -1,0 +1,27 @@
+{
+  "sdkPath": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+  "downloadedAtUtc": "2026-03-15T20:06:39Z",
+  "metalHeaders": [
+    "Metal.h",
+    "MTLAllocation.h",
+    "MTLBuffer.h",
+    "MTLCommandBuffer.h",
+    "MTLCommandEncoder.h",
+    "MTLCommandQueue.h",
+    "MTLDepthStencil.h",
+    "MTLDevice.h",
+    "MTLDrawable.h",
+    "MTLFunctionDescriptor.h",
+    "MTLLibrary.h",
+    "MTLPixelFormat.h",
+    "MTLRenderCommandEncoder.h",
+    "MTLRenderPass.h",
+    "MTLRenderPipeline.h",
+    "MTLSampler.h",
+    "MTLTexture.h",
+    "MTLTypes.h"
+  ],
+  "quartzCoreHeaders": [
+    "CAMetalLayer.h"
+  ]
+}
