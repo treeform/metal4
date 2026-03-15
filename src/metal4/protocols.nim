@@ -53,6 +53,20 @@ objc:
   proc setDepthAttachmentPixelFormat*(self: MTLRenderPipelineDescriptor, x: MTLPixelFormat)
   proc pixelFormat*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLPixelFormat
   proc setPixelFormat*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLPixelFormat)
+  proc isBlendingEnabled*(self: MTLRenderPipelineColorAttachmentDescriptor): bool
+  proc setBlendingEnabled*(self: MTLRenderPipelineColorAttachmentDescriptor, x: bool)
+  proc sourceRGBBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor
+  proc setSourceRGBBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendFactor)
+  proc destinationRGBBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor
+  proc setDestinationRGBBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendFactor)
+  proc rgbBlendOperation*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendOperation
+  proc setRgbBlendOperation*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendOperation)
+  proc sourceAlphaBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor
+  proc setSourceAlphaBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendFactor)
+  proc destinationAlphaBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor
+  proc setDestinationAlphaBlendFactor*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendFactor)
+  proc alphaBlendOperation*(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendOperation
+  proc setAlphaBlendOperation*(self: MTLRenderPipelineColorAttachmentDescriptor, x: MTLBlendOperation)
   proc texture*(self: MTLRenderPassAttachmentDescriptor): MTLTexture
   proc setTexture*(self: MTLRenderPassAttachmentDescriptor, x: MTLTexture)
   proc loadAction*(self: MTLRenderPassAttachmentDescriptor): MTLLoadAction

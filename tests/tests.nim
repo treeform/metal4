@@ -18,6 +18,8 @@ doAssert clear.alpha == 1.0
 doAssert MTLPixelFormatBGRA8Unorm == 80
 doAssert MTLPrimitiveTypeTriangle == 3
 doAssert MTLCompareFunctionLess == 1
+doAssert MTLBlendFactorOne == 1
+doAssert MTLBlendOperationAdd == 0
 
 echo "Testing context and helper surface"
 doAssert compiles(0.MTLDevice)
@@ -31,6 +33,16 @@ doAssert compiles(
   )
 )
 doAssert compiles(MetalContext())
+doAssert compiles(
+  MTLRenderPipelineColorAttachmentDescriptor(
+    0
+  ).setBlendingEnabled(true)
+)
+doAssert compiles(
+  MTLRenderPipelineColorAttachmentDescriptor(
+    0
+  ).setSourceRGBBlendFactor(MTLBlendFactorOne)
+)
 
 echo "Testing parser snapshot content"
 let irText = readFile(root / "headers" / "ir.json")
