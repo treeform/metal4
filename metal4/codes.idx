@@ -1,0 +1,6 @@
+nimTitle	codes	metal4/codes.html	module metal4/codes		0
+nim	Metal4Error	metal4/codes.html#Metal4Error	object Metal4Error		5
+nim	isNil	metal4/codes.html#isNil,T	proc isNil[T](value: T): bool		7
+nim	messageNSError	metal4/codes.html#messageNSError,NSError,string	proc messageNSError(error: NSError; msg: string): string		11
+nim	checkNSError	metal4/codes.html#checkNSError,NSError,string	proc checkNSError(error: NSError; msg: string)		18
+nim	checkNil	metal4/codes.html#checkNil,T,string	proc checkNil[T](value: T; msg: string)		23

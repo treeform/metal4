@@ -1,0 +1,8 @@
+nimTitle	context	metal4/context.html	module metal4/context		0
+nim	MetalContext	metal4/context.html#MetalContext	object MetalContext		7
+nim	updateDrawableSize	metal4/context.html#updateDrawableSize,MetalContext	proc updateDrawableSize(ctx: var MetalContext)		14
+nim	init	metal4/context.html#init,MetalContext,Window,MTLPixelFormat	proc init(ctx: var MetalContext; window: Window; device = 0.MTLDevice;\n     pixelFormat: MTLPixelFormat = 80'u)		26
+nim	newMetalContext	metal4/context.html#newMetalContext,Window,MTLPixelFormat	proc newMetalContext(window: Window; device = 0.MTLDevice;\n                pixelFormat: MTLPixelFormat = 80'u): MetalContext		60
+nim	currentDrawable	metal4/context.html#currentDrawable,MetalContext	proc currentDrawable(ctx: var MetalContext): CAMetalDrawable		68
+nim	newCommandBuffer	metal4/context.html#newCommandBuffer,MetalContext	proc newCommandBuffer(ctx: MetalContext): MTLCommandBuffer		73
+nim	clearPass	metal4/context.html#clearPass,MetalContext,CAMetalDrawable,MTLClearColor	proc clearPass(ctx: var MetalContext; drawable: CAMetalDrawable; clear: MTLClearColor): MTLRenderPassDescriptor		78

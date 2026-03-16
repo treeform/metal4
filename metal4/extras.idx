@@ -1,0 +1,8 @@
+nimTitle	extras	metal4/extras.html	module metal4/extras		0
+nim	setWantsLayer	metal4/extras.html#setWantsLayer,NSView,bool	proc setWantsLayer(self: NSView; x: bool)		6
+nim	layer	metal4/extras.html#layer,NSView	proc layer(self: NSView): CALayer		7
+nim	setLayer	metal4/extras.html#setLayer,NSView,CALayer	proc setLayer(self: NSView; x: CALayer)		8
+nim	addSublayer	metal4/extras.html#addSublayer,CALayer,CALayer	proc addSublayer(self: CALayer; x: CALayer)		9
+nim	setFrame	metal4/extras.html#setFrame,CALayer,CGRect	proc setFrame(self: CALayer; x: NSRect)		10
+nim	setContentsScale	metal4/extras.html#setContentsScale,CALayer,float64	proc setContentsScale(self: CALayer; x: float64)		11
+nim	setOpaque	metal4/extras.html#setOpaque,CALayer,bool	proc setOpaque(self: CALayer; x: bool)		5

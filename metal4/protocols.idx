@@ -1,0 +1,109 @@
+nimTitle	protocols	metal4/protocols.html	module metal4/protocols		0
+nim	toCALayer	metal4/protocols.html#toCALayer.c,CAMetalLayer	converter toCALayer(layer: CAMetalLayer): CALayer		8
+nim	toMTLRenderPassAttachmentDescriptor	metal4/protocols.html#toMTLRenderPassAttachmentDescriptor.c,MTLRenderPassColorAttachmentDescriptor	converter toMTLRenderPassAttachmentDescriptor(descriptor: MTLRenderPassColorAttachmentDescriptor): MTLRenderPassAttachmentDescriptor		12
+nim	toMTLRenderPassAttachmentDescriptor	metal4/protocols.html#toMTLRenderPassAttachmentDescriptor.c,MTLRenderPassDepthAttachmentDescriptor	converter toMTLRenderPassAttachmentDescriptor(descriptor: MTLRenderPassDepthAttachmentDescriptor): MTLRenderPassAttachmentDescriptor		18
+nim	toMTLCommandEncoder	metal4/protocols.html#toMTLCommandEncoder.c,MTLRenderCommandEncoder	converter toMTLCommandEncoder(encoder: MTLRenderCommandEncoder): MTLCommandEncoder		24
+nim	init	metal4/protocols.html#init,CAMetalLayer	proc init(self: CAMetalLayer): CAMetalLayer		31
+nim	init	metal4/protocols.html#init,MTLRenderPipelineDescriptor	proc init(self: MTLRenderPipelineDescriptor): MTLRenderPipelineDescriptor		32
+nim	init	metal4/protocols.html#init,MTLSamplerDescriptor	proc init(self: MTLSamplerDescriptor): MTLSamplerDescriptor		33
+nim	init	metal4/protocols.html#init,MTLDepthStencilDescriptor	proc init(self: MTLDepthStencilDescriptor): MTLDepthStencilDescriptor		34
+nim	texture	metal4/protocols.html#texture,CAMetalDrawable	proc texture(self: CAMetalDrawable): MTLTexture		35
+nim	layer	metal4/protocols.html#layer,CAMetalDrawable	proc layer(self: CAMetalDrawable): CAMetalLayer		36
+nim	device	metal4/protocols.html#device,CAMetalLayer	proc device(self: CAMetalLayer): MTLDevice		37
+nim	setDevice	metal4/protocols.html#setDevice,CAMetalLayer,MTLDevice	proc setDevice(self: CAMetalLayer; x: MTLDevice)		38
+nim	pixelFormat	metal4/protocols.html#pixelFormat,CAMetalLayer	proc pixelFormat(self: CAMetalLayer): MTLPixelFormat		39
+nim	setPixelFormat	metal4/protocols.html#setPixelFormat,CAMetalLayer,MTLPixelFormat	proc setPixelFormat(self: CAMetalLayer; x: MTLPixelFormat)		40
+nim	framebufferOnly	metal4/protocols.html#framebufferOnly,CAMetalLayer	proc framebufferOnly(self: CAMetalLayer): bool		41
+nim	setFramebufferOnly	metal4/protocols.html#setFramebufferOnly,CAMetalLayer,bool	proc setFramebufferOnly(self: CAMetalLayer; x: bool)		42
+nim	drawableSize	metal4/protocols.html#drawableSize,CAMetalLayer	proc drawableSize(self: CAMetalLayer): NSSize		43
+nim	setDrawableSize	metal4/protocols.html#setDrawableSize,CAMetalLayer,CGSize	proc setDrawableSize(self: CAMetalLayer; x: NSSize)		44
+nim	usage	metal4/protocols.html#usage,MTLTextureDescriptor	proc usage(self: MTLTextureDescriptor): MTLTextureUsage		45
+nim	setUsage	metal4/protocols.html#setUsage,MTLTextureDescriptor,MTLTextureUsage	proc setUsage(self: MTLTextureDescriptor; x: MTLTextureUsage)		46
+nim	vertexFunction	metal4/protocols.html#vertexFunction,MTLRenderPipelineDescriptor	proc vertexFunction(self: MTLRenderPipelineDescriptor): MTLFunction		47
+nim	setVertexFunction	metal4/protocols.html#setVertexFunction,MTLRenderPipelineDescriptor,MTLFunction	proc setVertexFunction(self: MTLRenderPipelineDescriptor; x: MTLFunction)		48
+nim	fragmentFunction	metal4/protocols.html#fragmentFunction,MTLRenderPipelineDescriptor	proc fragmentFunction(self: MTLRenderPipelineDescriptor): MTLFunction		49
+nim	setFragmentFunction	metal4/protocols.html#setFragmentFunction,MTLRenderPipelineDescriptor,MTLFunction	proc setFragmentFunction(self: MTLRenderPipelineDescriptor; x: MTLFunction)		50
+nim	colorAttachments	metal4/protocols.html#colorAttachments,MTLRenderPipelineDescriptor	proc colorAttachments(self: MTLRenderPipelineDescriptor): MTLRenderPipelineColorAttachmentDescriptorArray		51
+nim	depthAttachmentPixelFormat	metal4/protocols.html#depthAttachmentPixelFormat,MTLRenderPipelineDescriptor	proc depthAttachmentPixelFormat(self: MTLRenderPipelineDescriptor): MTLPixelFormat		52
+nim	setDepthAttachmentPixelFormat	metal4/protocols.html#setDepthAttachmentPixelFormat,MTLRenderPipelineDescriptor,MTLPixelFormat	proc setDepthAttachmentPixelFormat(self: MTLRenderPipelineDescriptor;\n                              x: MTLPixelFormat)		53
+nim	pixelFormat	metal4/protocols.html#pixelFormat,MTLRenderPipelineColorAttachmentDescriptor	proc pixelFormat(self: MTLRenderPipelineColorAttachmentDescriptor): MTLPixelFormat		54
+nim	setPixelFormat	metal4/protocols.html#setPixelFormat,MTLRenderPipelineColorAttachmentDescriptor,MTLPixelFormat	proc setPixelFormat(self: MTLRenderPipelineColorAttachmentDescriptor;\n               x: MTLPixelFormat)		55
+nim	isBlendingEnabled	metal4/protocols.html#isBlendingEnabled,MTLRenderPipelineColorAttachmentDescriptor	proc isBlendingEnabled(self: MTLRenderPipelineColorAttachmentDescriptor): bool		56
+nim	setBlendingEnabled	metal4/protocols.html#setBlendingEnabled,MTLRenderPipelineColorAttachmentDescriptor,bool	proc setBlendingEnabled(self: MTLRenderPipelineColorAttachmentDescriptor; x: bool)		57
+nim	sourceRGBBlendFactor	metal4/protocols.html#sourceRGBBlendFactor,MTLRenderPipelineColorAttachmentDescriptor	proc sourceRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor		58
+nim	setSourceRGBBlendFactor	metal4/protocols.html#setSourceRGBBlendFactor,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendFactor	proc setSourceRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor;\n                        x: MTLBlendFactor)		59
+nim	destinationRGBBlendFactor	metal4/protocols.html#destinationRGBBlendFactor,MTLRenderPipelineColorAttachmentDescriptor	proc destinationRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor		60
+nim	setDestinationRGBBlendFactor	metal4/protocols.html#setDestinationRGBBlendFactor,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendFactor	proc setDestinationRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor;\n                             x: MTLBlendFactor)		61
+nim	rgbBlendOperation	metal4/protocols.html#rgbBlendOperation,MTLRenderPipelineColorAttachmentDescriptor	proc rgbBlendOperation(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendOperation		62
+nim	setRgbBlendOperation	metal4/protocols.html#setRgbBlendOperation,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendOperation	proc setRgbBlendOperation(self: MTLRenderPipelineColorAttachmentDescriptor;\n                     x: MTLBlendOperation)		63
+nim	sourceAlphaBlendFactor	metal4/protocols.html#sourceAlphaBlendFactor,MTLRenderPipelineColorAttachmentDescriptor	proc sourceAlphaBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor		64
+nim	setSourceAlphaBlendFactor	metal4/protocols.html#setSourceAlphaBlendFactor,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendFactor	proc setSourceAlphaBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor;\n                          x: MTLBlendFactor)		65
+nim	destinationAlphaBlendFactor	metal4/protocols.html#destinationAlphaBlendFactor,MTLRenderPipelineColorAttachmentDescriptor	proc destinationAlphaBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor		66
+nim	setDestinationAlphaBlendFactor	metal4/protocols.html#setDestinationAlphaBlendFactor,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendFactor	proc setDestinationAlphaBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor;\n                               x: MTLBlendFactor)		67
+nim	alphaBlendOperation	metal4/protocols.html#alphaBlendOperation,MTLRenderPipelineColorAttachmentDescriptor	proc alphaBlendOperation(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendOperation		68
+nim	setAlphaBlendOperation	metal4/protocols.html#setAlphaBlendOperation,MTLRenderPipelineColorAttachmentDescriptor,MTLBlendOperation	proc setAlphaBlendOperation(self: MTLRenderPipelineColorAttachmentDescriptor;\n                       x: MTLBlendOperation)		69
+nim	texture	metal4/protocols.html#texture,MTLRenderPassAttachmentDescriptor	proc texture(self: MTLRenderPassAttachmentDescriptor): MTLTexture		70
+nim	setTexture	metal4/protocols.html#setTexture,MTLRenderPassAttachmentDescriptor,MTLTexture	proc setTexture(self: MTLRenderPassAttachmentDescriptor; x: MTLTexture)		71
+nim	loadAction	metal4/protocols.html#loadAction,MTLRenderPassAttachmentDescriptor	proc loadAction(self: MTLRenderPassAttachmentDescriptor): MTLLoadAction		72
+nim	setLoadAction	metal4/protocols.html#setLoadAction,MTLRenderPassAttachmentDescriptor,MTLLoadAction	proc setLoadAction(self: MTLRenderPassAttachmentDescriptor; x: MTLLoadAction)		73
+nim	storeAction	metal4/protocols.html#storeAction,MTLRenderPassAttachmentDescriptor	proc storeAction(self: MTLRenderPassAttachmentDescriptor): MTLStoreAction		74
+nim	setStoreAction	metal4/protocols.html#setStoreAction,MTLRenderPassAttachmentDescriptor,MTLStoreAction	proc setStoreAction(self: MTLRenderPassAttachmentDescriptor; x: MTLStoreAction)		75
+nim	clearColor	metal4/protocols.html#clearColor,MTLRenderPassColorAttachmentDescriptor	proc clearColor(self: MTLRenderPassColorAttachmentDescriptor): MTLClearColor		76
+nim	setClearColor	metal4/protocols.html#setClearColor,MTLRenderPassColorAttachmentDescriptor,MTLClearColor	proc setClearColor(self: MTLRenderPassColorAttachmentDescriptor; x: MTLClearColor)		77
+nim	colorAttachments	metal4/protocols.html#colorAttachments,MTLRenderPassDescriptor	proc colorAttachments(self: MTLRenderPassDescriptor): MTLRenderPassColorAttachmentDescriptorArray		78
+nim	depthAttachment	metal4/protocols.html#depthAttachment,MTLRenderPassDescriptor	proc depthAttachment(self: MTLRenderPassDescriptor): MTLRenderPassDepthAttachmentDescriptor		79
+nim	setDepthAttachment	metal4/protocols.html#setDepthAttachment,MTLRenderPassDescriptor,MTLRenderPassDepthAttachmentDescriptor	proc setDepthAttachment(self: MTLRenderPassDescriptor;\n                   x: MTLRenderPassDepthAttachmentDescriptor)		80
+nim	clearDepth	metal4/protocols.html#clearDepth,MTLRenderPassDepthAttachmentDescriptor	proc clearDepth(self: MTLRenderPassDepthAttachmentDescriptor): float64		81
+nim	setClearDepth	metal4/protocols.html#setClearDepth,MTLRenderPassDepthAttachmentDescriptor,float64	proc setClearDepth(self: MTLRenderPassDepthAttachmentDescriptor; x: float64)		82
+nim	depthCompareFunction	metal4/protocols.html#depthCompareFunction,MTLDepthStencilDescriptor	proc depthCompareFunction(self: MTLDepthStencilDescriptor): MTLCompareFunction		83
+nim	setDepthCompareFunction	metal4/protocols.html#setDepthCompareFunction,MTLDepthStencilDescriptor,MTLCompareFunction	proc setDepthCompareFunction(self: MTLDepthStencilDescriptor; x: MTLCompareFunction)		84
+nim	depthWriteEnabled	metal4/protocols.html#depthWriteEnabled,MTLDepthStencilDescriptor	proc depthWriteEnabled(self: MTLDepthStencilDescriptor): bool		85
+nim	setDepthWriteEnabled	metal4/protocols.html#setDepthWriteEnabled,MTLDepthStencilDescriptor,bool	proc setDepthWriteEnabled(self: MTLDepthStencilDescriptor; x: bool)		86
+nim	minFilter	metal4/protocols.html#minFilter,MTLSamplerDescriptor	proc minFilter(self: MTLSamplerDescriptor): MTLSamplerMinMagFilter		87
+nim	setMinFilter	metal4/protocols.html#setMinFilter,MTLSamplerDescriptor,MTLSamplerMinMagFilter	proc setMinFilter(self: MTLSamplerDescriptor; x: MTLSamplerMinMagFilter)		88
+nim	magFilter	metal4/protocols.html#magFilter,MTLSamplerDescriptor	proc magFilter(self: MTLSamplerDescriptor): MTLSamplerMinMagFilter		89
+nim	setMagFilter	metal4/protocols.html#setMagFilter,MTLSamplerDescriptor,MTLSamplerMinMagFilter	proc setMagFilter(self: MTLSamplerDescriptor; x: MTLSamplerMinMagFilter)		90
+nim	mipFilter	metal4/protocols.html#mipFilter,MTLSamplerDescriptor	proc mipFilter(self: MTLSamplerDescriptor): MTLSamplerMipFilter		91
+nim	setMipFilter	metal4/protocols.html#setMipFilter,MTLSamplerDescriptor,MTLSamplerMipFilter	proc setMipFilter(self: MTLSamplerDescriptor; x: MTLSamplerMipFilter)		92
+nim	sAddressMode	metal4/protocols.html#sAddressMode,MTLSamplerDescriptor	proc sAddressMode(self: MTLSamplerDescriptor): MTLSamplerAddressMode		93
+nim	setSAddressMode	metal4/protocols.html#setSAddressMode,MTLSamplerDescriptor,MTLSamplerAddressMode	proc setSAddressMode(self: MTLSamplerDescriptor; x: MTLSamplerAddressMode)		94
+nim	tAddressMode	metal4/protocols.html#tAddressMode,MTLSamplerDescriptor	proc tAddressMode(self: MTLSamplerDescriptor): MTLSamplerAddressMode		95
+nim	setTAddressMode	metal4/protocols.html#setTAddressMode,MTLSamplerDescriptor,MTLSamplerAddressMode	proc setTAddressMode(self: MTLSamplerDescriptor; x: MTLSamplerAddressMode)		96
+nim	nextDrawable	metal4/protocols.html#nextDrawable,CAMetalLayer	proc nextDrawable(self: CAMetalLayer): CAMetalDrawable		97
+nim	newCommandQueue	metal4/protocols.html#newCommandQueue,MTLDevice	proc newCommandQueue(self: MTLDevice): MTLCommandQueue		98
+nim	newBufferWithBytes	metal4/protocols.html#newBufferWithBytes,MTLDevice,pointer,uint,uint	proc newBufferWithBytes(self: MTLDevice; x: pointer; length: uint; options: uint): MTLBuffer		99
+nim	newBufferWithLength	metal4/protocols.html#newBufferWithLength,MTLDevice,uint,uint	proc newBufferWithLength(self: MTLDevice; x: uint; options: uint): MTLBuffer		100
+nim	newTextureWithDescriptor	metal4/protocols.html#newTextureWithDescriptor,MTLDevice,MTLTextureDescriptor	proc newTextureWithDescriptor(self: MTLDevice; x: MTLTextureDescriptor): MTLTexture		101
+nim	newLibraryWithSource	metal4/protocols.html#newLibraryWithSource,MTLDevice,NSString,ID,ptr.NSError	proc newLibraryWithSource(self: MTLDevice; x: NSString; options: ID;\n                     error: ptr NSError): MTLLibrary		102
+nim	newRenderPipelineStateWithDescriptor	metal4/protocols.html#newRenderPipelineStateWithDescriptor,MTLDevice,MTLRenderPipelineDescriptor,ptr.NSError	proc newRenderPipelineStateWithDescriptor(self: MTLDevice;\n                                     x: MTLRenderPipelineDescriptor;\n                                     error: ptr NSError): MTLRenderPipelineState		103
+nim	newDepthStencilStateWithDescriptor	metal4/protocols.html#newDepthStencilStateWithDescriptor,MTLDevice,MTLDepthStencilDescriptor	proc newDepthStencilStateWithDescriptor(self: MTLDevice; x: MTLDepthStencilDescriptor): MTLDepthStencilState		104
+nim	newSamplerStateWithDescriptor	metal4/protocols.html#newSamplerStateWithDescriptor,MTLDevice,MTLSamplerDescriptor	proc newSamplerStateWithDescriptor(self: MTLDevice; x: MTLSamplerDescriptor): MTLSamplerState		105
+nim	newFunctionWithName	metal4/protocols.html#newFunctionWithName,MTLLibrary,NSString	proc newFunctionWithName(self: MTLLibrary; x: NSString): MTLFunction		106
+nim	contents	metal4/protocols.html#contents,MTLBuffer	proc contents(self: MTLBuffer): pointer		107
+nim	commandBuffer	metal4/protocols.html#commandBuffer,MTLCommandQueue	proc commandBuffer(self: MTLCommandQueue): MTLCommandBuffer		108
+nim	renderCommandEncoderWithDescriptor	metal4/protocols.html#renderCommandEncoderWithDescriptor,MTLCommandBuffer,MTLRenderPassDescriptor	proc renderCommandEncoderWithDescriptor(self: MTLCommandBuffer;\n                                   x: MTLRenderPassDescriptor): MTLRenderCommandEncoder		109
+nim	presentDrawable	metal4/protocols.html#presentDrawable,MTLCommandBuffer,CAMetalDrawable	proc presentDrawable(self: MTLCommandBuffer; x: CAMetalDrawable)		110
+nim	commit	metal4/protocols.html#commit,MTLCommandBuffer	proc commit(self: MTLCommandBuffer)		111
+nim	objectAtIndexedSubscript	metal4/protocols.html#objectAtIndexedSubscript,MTLRenderPassColorAttachmentDescriptorArray,uint	proc objectAtIndexedSubscript(self: MTLRenderPassColorAttachmentDescriptorArray;\n                         x: uint): MTLRenderPassColorAttachmentDescriptor		112
+nim	objectAtIndexedSubscript	metal4/protocols.html#objectAtIndexedSubscript,MTLRenderPipelineColorAttachmentDescriptorArray,uint	proc objectAtIndexedSubscript(self: MTLRenderPipelineColorAttachmentDescriptorArray;\n                         x: uint): MTLRenderPipelineColorAttachmentDescriptor		113
+nim	renderPassDescriptor	metal4/protocols.html#renderPassDescriptor,typedesc[MTLRenderPassDescriptor]	proc renderPassDescriptor(class: typedesc[MTLRenderPassDescriptor]): MTLRenderPassDescriptor		114
+nim	texture2DDescriptorWithPixelFormat	metal4/protocols.html#texture2DDescriptorWithPixelFormat,typedesc[MTLTextureDescriptor],MTLPixelFormat,uint,uint,bool	proc texture2DDescriptorWithPixelFormat(class: typedesc[MTLTextureDescriptor];\n                                   x: MTLPixelFormat; width: uint; height: uint;\n                                   mipmapped: bool): MTLTextureDescriptor		115
+nim	replaceRegion	metal4/protocols.html#replaceRegion,MTLTexture,MTLRegion,uint,pointer,uint	proc replaceRegion(self: MTLTexture; x: MTLRegion; mipmapLevel: uint;\n              withBytes: pointer; bytesPerRow: uint)		116
+nim	endEncoding	metal4/protocols.html#endEncoding,MTLCommandEncoder	proc endEncoding(self: MTLCommandEncoder)		117
+nim	setRenderPipelineState	metal4/protocols.html#setRenderPipelineState,MTLRenderCommandEncoder,MTLRenderPipelineState	proc setRenderPipelineState(self: MTLRenderCommandEncoder; x: MTLRenderPipelineState)		118
+nim	setViewport	metal4/protocols.html#setViewport,MTLRenderCommandEncoder,MTLViewport	proc setViewport(self: MTLRenderCommandEncoder; x: MTLViewport)		119
+nim	setCullMode	metal4/protocols.html#setCullMode,MTLRenderCommandEncoder,MTLCullMode	proc setCullMode(self: MTLRenderCommandEncoder; x: MTLCullMode)		120
+nim	setFrontFacingWinding	metal4/protocols.html#setFrontFacingWinding,MTLRenderCommandEncoder,MTLWinding	proc setFrontFacingWinding(self: MTLRenderCommandEncoder; x: MTLWinding)		121
+nim	setDepthStencilState	metal4/protocols.html#setDepthStencilState,MTLRenderCommandEncoder,MTLDepthStencilState	proc setDepthStencilState(self: MTLRenderCommandEncoder; x: MTLDepthStencilState)		122
+nim	setVertexBytes	metal4/protocols.html#setVertexBytes,MTLRenderCommandEncoder,pointer,uint,uint	proc setVertexBytes(self: MTLRenderCommandEncoder; x: pointer; length: uint;\n               atIndex: uint)		123
+nim	setVertexBuffer	metal4/protocols.html#setVertexBuffer,MTLRenderCommandEncoder,MTLBuffer,uint,uint	proc setVertexBuffer(self: MTLRenderCommandEncoder; x: MTLBuffer; offset: uint;\n                atIndex: uint)		124
+nim	setFragmentTexture	metal4/protocols.html#setFragmentTexture,MTLRenderCommandEncoder,MTLTexture,uint	proc setFragmentTexture(self: MTLRenderCommandEncoder; x: MTLTexture; atIndex: uint)		125
+nim	setFragmentSamplerState	metal4/protocols.html#setFragmentSamplerState,MTLRenderCommandEncoder,MTLSamplerState,uint	proc setFragmentSamplerState(self: MTLRenderCommandEncoder; x: MTLSamplerState;\n                        atIndex: uint)		126
+nim	drawPrimitives	metal4/protocols.html#drawPrimitives,MTLRenderCommandEncoder,MTLPrimitiveType,uint,uint	proc drawPrimitives(self: MTLRenderCommandEncoder; x: MTLPrimitiveType;\n               vertexStart: uint; vertexCount: uint)		30
+nimgrp	texture	metal4/protocols.html#texture-procs-all	proc		35
+nimgrp	pixelformat	metal4/protocols.html#pixelFormat-procs-all	proc		39
+nimgrp	colorattachments	metal4/protocols.html#colorAttachments-procs-all	proc		51
+nimgrp	objectatindexedsubscript	metal4/protocols.html#objectAtIndexedSubscript-procs-all	proc		112
+nimgrp	init	metal4/protocols.html#init-procs-all	proc		31
+nimgrp	setpixelformat	metal4/protocols.html#setPixelFormat-procs-all	proc		40
+nimgrp	tomtlrenderpassattachmentdescriptor	metal4/protocols.html#toMTLRenderPassAttachmentDescriptor-converters-all	converter		12
