@@ -28,6 +28,8 @@ Nim's explicit, data-oriented style. A small hand-written layer in
 `src/metal4/extras.nim` and `src/metal4/context.nim` provides the ergonomic
 pieces that are awkward to derive mechanically from Objective-C headers alone.
 
+> **AI disclaimer: Much of this library was AI generated.**
+
 ## Documentation
 
 API docs are generated from `src/metal4.nim` by `.github/workflows/docs.yml`.
