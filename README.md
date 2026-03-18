@@ -4,6 +4,9 @@
 
 `nimby install metal4`
 
+`metal4` depends on `windy` for macOS windowing and Objective-C interop used by
+the context helpers and examples.
+
 ![Github Actions](https://github.com/treeform/metal4/workflows/Github%20Actions/badge.svg)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/treeform/metal4)
 ![GitHub Repo stars](https://img.shields.io/github/stars/treeform/metal4)
