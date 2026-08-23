@@ -16,13 +16,16 @@
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=">
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="../nimdoc.out.css?v=2.2.6">
+<link rel="stylesheet" type="text/css" href="../nimdoc.out.css?v=2.2.10">
 
 <!-- JS -->
-<script type="text/javascript" src="../dochack.js?v=2.2.6"></script>
+<script type="text/javascript" src="../dochack.js?v=2.2.10"></script>
 </head>
 <body>
   <div class="document" id="documentId">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" id="nav-burger">&#9776;</label>
+    <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">metal4/constants</h1>
       <div class="row">
@@ -314,7 +317,7 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="MTLBlendFactor">
-  <dt><pre><a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -324,7 +327,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperation">
-  <dt><pre><a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -334,7 +337,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunction">
-  <dt><pre><a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -344,7 +347,7 @@
   </dd>
 </div>
 <div id="MTLCullMode">
-  <dt><pre><a href="constants.html#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -354,7 +357,7 @@
   </dd>
 </div>
 <div id="MTLLoadAction">
-  <dt><pre><a href="constants.html#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -364,7 +367,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormat">
-  <dt><pre><a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -374,7 +377,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveType">
-  <dt><pre><a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -384,7 +387,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressMode">
-  <dt><pre><a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -394,7 +397,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMinMagFilter">
-  <dt><pre><a href="constants.html#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -404,7 +407,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMipFilter">
-  <dt><pre><a href="constants.html#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -414,7 +417,7 @@
   </dd>
 </div>
 <div id="MTLStoreAction">
-  <dt><pre><a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -424,7 +427,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsage">
-  <dt><pre><a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -434,7 +437,7 @@
   </dd>
 </div>
 <div id="MTLWinding">
-  <dt><pre><a href="constants.html#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dt><pre><a href="#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
   <dd>
     
     
@@ -450,7 +453,7 @@
   <h1><a class="toc-backref" href="#10">Consts</a></h1>
   <dl class="item">
     <div id="MTLBlendFactorBlendAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorBlendAlpha"><span class="Identifier">MTLBlendFactorBlendAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">13</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorBlendAlpha"><span class="Identifier">MTLBlendFactorBlendAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">13</span></pre></dt>
   <dd>
     
     
@@ -460,7 +463,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorBlendColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorBlendColor"><span class="Identifier">MTLBlendFactorBlendColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">11</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorBlendColor"><span class="Identifier">MTLBlendFactorBlendColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">11</span></pre></dt>
   <dd>
     
     
@@ -470,7 +473,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorDestinationAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorDestinationAlpha"><span class="Identifier">MTLBlendFactorDestinationAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">8</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorDestinationAlpha"><span class="Identifier">MTLBlendFactorDestinationAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">8</span></pre></dt>
   <dd>
     
     
@@ -480,7 +483,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorDestinationColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorDestinationColor"><span class="Identifier">MTLBlendFactorDestinationColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">6</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorDestinationColor"><span class="Identifier">MTLBlendFactorDestinationColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">6</span></pre></dt>
   <dd>
     
     
@@ -490,7 +493,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOne">
-  <dt><pre><a href="constants.html#MTLBlendFactorOne"><span class="Identifier">MTLBlendFactorOne</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOne"><span class="Identifier">MTLBlendFactorOne</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -500,7 +503,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusBlendAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusBlendAlpha"><span class="Identifier">MTLBlendFactorOneMinusBlendAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">14</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusBlendAlpha"><span class="Identifier">MTLBlendFactorOneMinusBlendAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">14</span></pre></dt>
   <dd>
     
     
@@ -510,7 +513,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusBlendColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusBlendColor"><span class="Identifier">MTLBlendFactorOneMinusBlendColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">12</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusBlendColor"><span class="Identifier">MTLBlendFactorOneMinusBlendColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">12</span></pre></dt>
   <dd>
     
     
@@ -520,7 +523,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusDestinationAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusDestinationAlpha"><span class="Identifier">MTLBlendFactorOneMinusDestinationAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">9</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusDestinationAlpha"><span class="Identifier">MTLBlendFactorOneMinusDestinationAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">9</span></pre></dt>
   <dd>
     
     
@@ -530,7 +533,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusDestinationColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusDestinationColor"><span class="Identifier">MTLBlendFactorOneMinusDestinationColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">7</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusDestinationColor"><span class="Identifier">MTLBlendFactorOneMinusDestinationColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">7</span></pre></dt>
   <dd>
     
     
@@ -540,7 +543,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusSource1Alpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusSource1Alpha"><span class="Identifier">MTLBlendFactorOneMinusSource1Alpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">18</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusSource1Alpha"><span class="Identifier">MTLBlendFactorOneMinusSource1Alpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">18</span></pre></dt>
   <dd>
     
     
@@ -550,7 +553,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusSource1Color">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusSource1Color"><span class="Identifier">MTLBlendFactorOneMinusSource1Color</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusSource1Color"><span class="Identifier">MTLBlendFactorOneMinusSource1Color</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">16</span></pre></dt>
   <dd>
     
     
@@ -560,7 +563,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusSourceAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusSourceAlpha"><span class="Identifier">MTLBlendFactorOneMinusSourceAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusSourceAlpha"><span class="Identifier">MTLBlendFactorOneMinusSourceAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
   <dd>
     
     
@@ -570,7 +573,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorOneMinusSourceColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorOneMinusSourceColor"><span class="Identifier">MTLBlendFactorOneMinusSourceColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorOneMinusSourceColor"><span class="Identifier">MTLBlendFactorOneMinusSourceColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -580,7 +583,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorSource1Alpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorSource1Alpha"><span class="Identifier">MTLBlendFactorSource1Alpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">17</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorSource1Alpha"><span class="Identifier">MTLBlendFactorSource1Alpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">17</span></pre></dt>
   <dd>
     
     
@@ -590,7 +593,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorSource1Color">
-  <dt><pre><a href="constants.html#MTLBlendFactorSource1Color"><span class="Identifier">MTLBlendFactorSource1Color</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">15</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorSource1Color"><span class="Identifier">MTLBlendFactorSource1Color</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">15</span></pre></dt>
   <dd>
     
     
@@ -600,7 +603,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorSourceAlpha">
-  <dt><pre><a href="constants.html#MTLBlendFactorSourceAlpha"><span class="Identifier">MTLBlendFactorSourceAlpha</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorSourceAlpha"><span class="Identifier">MTLBlendFactorSourceAlpha</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -610,7 +613,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorSourceAlphaSaturated">
-  <dt><pre><a href="constants.html#MTLBlendFactorSourceAlphaSaturated"><span class="Identifier">MTLBlendFactorSourceAlphaSaturated</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">10</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorSourceAlphaSaturated"><span class="Identifier">MTLBlendFactorSourceAlphaSaturated</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">10</span></pre></dt>
   <dd>
     
     
@@ -620,7 +623,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorSourceColor">
-  <dt><pre><a href="constants.html#MTLBlendFactorSourceColor"><span class="Identifier">MTLBlendFactorSourceColor</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorSourceColor"><span class="Identifier">MTLBlendFactorSourceColor</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -630,7 +633,7 @@
   </dd>
 </div>
 <div id="MTLBlendFactorZero">
-  <dt><pre><a href="constants.html#MTLBlendFactorZero"><span class="Identifier">MTLBlendFactorZero</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLBlendFactorZero"><span class="Identifier">MTLBlendFactorZero</span></a><span class="Other">:</span> <a href="#MTLBlendFactor"><span class="Identifier">MTLBlendFactor</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -640,7 +643,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperationAdd">
-  <dt><pre><a href="constants.html#MTLBlendOperationAdd"><span class="Identifier">MTLBlendOperationAdd</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperationAdd"><span class="Identifier">MTLBlendOperationAdd</span></a><span class="Other">:</span> <a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -650,7 +653,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperationMax">
-  <dt><pre><a href="constants.html#MTLBlendOperationMax"><span class="Identifier">MTLBlendOperationMax</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperationMax"><span class="Identifier">MTLBlendOperationMax</span></a><span class="Other">:</span> <a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -660,7 +663,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperationMin">
-  <dt><pre><a href="constants.html#MTLBlendOperationMin"><span class="Identifier">MTLBlendOperationMin</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperationMin"><span class="Identifier">MTLBlendOperationMin</span></a><span class="Other">:</span> <a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -670,7 +673,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperationReverseSubtract">
-  <dt><pre><a href="constants.html#MTLBlendOperationReverseSubtract"><span class="Identifier">MTLBlendOperationReverseSubtract</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperationReverseSubtract"><span class="Identifier">MTLBlendOperationReverseSubtract</span></a><span class="Other">:</span> <a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -680,7 +683,7 @@
   </dd>
 </div>
 <div id="MTLBlendOperationSubtract">
-  <dt><pre><a href="constants.html#MTLBlendOperationSubtract"><span class="Identifier">MTLBlendOperationSubtract</span></a><span class="Other">:</span> <a href="constants.html#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLBlendOperationSubtract"><span class="Identifier">MTLBlendOperationSubtract</span></a><span class="Other">:</span> <a href="#MTLBlendOperation"><span class="Identifier">MTLBlendOperation</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -690,7 +693,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionAlways">
-  <dt><pre><a href="constants.html#MTLCompareFunctionAlways"><span class="Identifier">MTLCompareFunctionAlways</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">7</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionAlways"><span class="Identifier">MTLCompareFunctionAlways</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">7</span></pre></dt>
   <dd>
     
     
@@ -700,7 +703,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionEqual">
-  <dt><pre><a href="constants.html#MTLCompareFunctionEqual"><span class="Identifier">MTLCompareFunctionEqual</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionEqual"><span class="Identifier">MTLCompareFunctionEqual</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -710,7 +713,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionGreater">
-  <dt><pre><a href="constants.html#MTLCompareFunctionGreater"><span class="Identifier">MTLCompareFunctionGreater</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionGreater"><span class="Identifier">MTLCompareFunctionGreater</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -720,7 +723,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionGreaterEqual">
-  <dt><pre><a href="constants.html#MTLCompareFunctionGreaterEqual"><span class="Identifier">MTLCompareFunctionGreaterEqual</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">6</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionGreaterEqual"><span class="Identifier">MTLCompareFunctionGreaterEqual</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">6</span></pre></dt>
   <dd>
     
     
@@ -730,7 +733,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionLess">
-  <dt><pre><a href="constants.html#MTLCompareFunctionLess"><span class="Identifier">MTLCompareFunctionLess</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionLess"><span class="Identifier">MTLCompareFunctionLess</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -740,7 +743,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionLessEqual">
-  <dt><pre><a href="constants.html#MTLCompareFunctionLessEqual"><span class="Identifier">MTLCompareFunctionLessEqual</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionLessEqual"><span class="Identifier">MTLCompareFunctionLessEqual</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -750,7 +753,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionNever">
-  <dt><pre><a href="constants.html#MTLCompareFunctionNever"><span class="Identifier">MTLCompareFunctionNever</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionNever"><span class="Identifier">MTLCompareFunctionNever</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -760,7 +763,7 @@
   </dd>
 </div>
 <div id="MTLCompareFunctionNotEqual">
-  <dt><pre><a href="constants.html#MTLCompareFunctionNotEqual"><span class="Identifier">MTLCompareFunctionNotEqual</span></a><span class="Other">:</span> <a href="constants.html#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
+  <dt><pre><a href="#MTLCompareFunctionNotEqual"><span class="Identifier">MTLCompareFunctionNotEqual</span></a><span class="Other">:</span> <a href="#MTLCompareFunction"><span class="Identifier">MTLCompareFunction</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
   <dd>
     
     
@@ -770,7 +773,7 @@
   </dd>
 </div>
 <div id="MTLCullModeBack">
-  <dt><pre><a href="constants.html#MTLCullModeBack"><span class="Identifier">MTLCullModeBack</span></a><span class="Other">:</span> <a href="constants.html#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLCullModeBack"><span class="Identifier">MTLCullModeBack</span></a><span class="Other">:</span> <a href="#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -780,7 +783,7 @@
   </dd>
 </div>
 <div id="MTLCullModeFront">
-  <dt><pre><a href="constants.html#MTLCullModeFront"><span class="Identifier">MTLCullModeFront</span></a><span class="Other">:</span> <a href="constants.html#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLCullModeFront"><span class="Identifier">MTLCullModeFront</span></a><span class="Other">:</span> <a href="#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -790,7 +793,7 @@
   </dd>
 </div>
 <div id="MTLCullModeNone">
-  <dt><pre><a href="constants.html#MTLCullModeNone"><span class="Identifier">MTLCullModeNone</span></a><span class="Other">:</span> <a href="constants.html#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLCullModeNone"><span class="Identifier">MTLCullModeNone</span></a><span class="Other">:</span> <a href="#MTLCullMode"><span class="Identifier">MTLCullMode</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -800,7 +803,7 @@
   </dd>
 </div>
 <div id="MTLLoadActionClear">
-  <dt><pre><a href="constants.html#MTLLoadActionClear"><span class="Identifier">MTLLoadActionClear</span></a><span class="Other">:</span> <a href="constants.html#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLLoadActionClear"><span class="Identifier">MTLLoadActionClear</span></a><span class="Other">:</span> <a href="#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -810,7 +813,7 @@
   </dd>
 </div>
 <div id="MTLLoadActionDontCare">
-  <dt><pre><a href="constants.html#MTLLoadActionDontCare"><span class="Identifier">MTLLoadActionDontCare</span></a><span class="Other">:</span> <a href="constants.html#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLLoadActionDontCare"><span class="Identifier">MTLLoadActionDontCare</span></a><span class="Other">:</span> <a href="#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -820,7 +823,7 @@
   </dd>
 </div>
 <div id="MTLLoadActionLoad">
-  <dt><pre><a href="constants.html#MTLLoadActionLoad"><span class="Identifier">MTLLoadActionLoad</span></a><span class="Other">:</span> <a href="constants.html#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLLoadActionLoad"><span class="Identifier">MTLLoadActionLoad</span></a><span class="Other">:</span> <a href="#MTLLoadAction"><span class="Identifier">MTLLoadAction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -830,7 +833,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatA1BGR5Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatA1BGR5Unorm"><span class="Identifier">MTLPixelFormatA1BGR5Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">41</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatA1BGR5Unorm"><span class="Identifier">MTLPixelFormatA1BGR5Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">41</span></pre></dt>
   <dd>
     
     
@@ -840,7 +843,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatA8Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatA8Unorm"><span class="Identifier">MTLPixelFormatA8Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatA8Unorm"><span class="Identifier">MTLPixelFormatA8Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -850,7 +853,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatABGR4Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatABGR4Unorm"><span class="Identifier">MTLPixelFormatABGR4Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">42</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatABGR4Unorm"><span class="Identifier">MTLPixelFormatABGR4Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">42</span></pre></dt>
   <dd>
     
     
@@ -860,7 +863,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_4x4_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_4x4_HDR"><span class="Identifier">MTLPixelFormatASTC_4x4_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">222</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_4x4_HDR"><span class="Identifier">MTLPixelFormatASTC_4x4_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">222</span></pre></dt>
   <dd>
     
     
@@ -870,7 +873,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_4x4_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_4x4_LDR"><span class="Identifier">MTLPixelFormatASTC_4x4_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">204</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_4x4_LDR"><span class="Identifier">MTLPixelFormatASTC_4x4_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">204</span></pre></dt>
   <dd>
     
     
@@ -880,7 +883,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_4x4_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_4x4_sRGB"><span class="Identifier">MTLPixelFormatASTC_4x4_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">186</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_4x4_sRGB"><span class="Identifier">MTLPixelFormatASTC_4x4_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">186</span></pre></dt>
   <dd>
     
     
@@ -890,7 +893,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x4_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x4_HDR"><span class="Identifier">MTLPixelFormatASTC_5x4_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">223</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x4_HDR"><span class="Identifier">MTLPixelFormatASTC_5x4_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">223</span></pre></dt>
   <dd>
     
     
@@ -900,7 +903,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x4_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x4_LDR"><span class="Identifier">MTLPixelFormatASTC_5x4_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">205</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x4_LDR"><span class="Identifier">MTLPixelFormatASTC_5x4_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">205</span></pre></dt>
   <dd>
     
     
@@ -910,7 +913,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x4_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x4_sRGB"><span class="Identifier">MTLPixelFormatASTC_5x4_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">187</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x4_sRGB"><span class="Identifier">MTLPixelFormatASTC_5x4_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">187</span></pre></dt>
   <dd>
     
     
@@ -920,7 +923,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x5_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x5_HDR"><span class="Identifier">MTLPixelFormatASTC_5x5_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">224</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x5_HDR"><span class="Identifier">MTLPixelFormatASTC_5x5_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">224</span></pre></dt>
   <dd>
     
     
@@ -930,7 +933,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x5_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x5_LDR"><span class="Identifier">MTLPixelFormatASTC_5x5_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">206</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x5_LDR"><span class="Identifier">MTLPixelFormatASTC_5x5_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">206</span></pre></dt>
   <dd>
     
     
@@ -940,7 +943,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_5x5_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_5x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_5x5_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">188</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_5x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_5x5_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">188</span></pre></dt>
   <dd>
     
     
@@ -950,7 +953,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x5_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x5_HDR"><span class="Identifier">MTLPixelFormatASTC_6x5_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">225</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x5_HDR"><span class="Identifier">MTLPixelFormatASTC_6x5_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">225</span></pre></dt>
   <dd>
     
     
@@ -960,7 +963,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x5_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x5_LDR"><span class="Identifier">MTLPixelFormatASTC_6x5_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">207</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x5_LDR"><span class="Identifier">MTLPixelFormatASTC_6x5_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">207</span></pre></dt>
   <dd>
     
     
@@ -970,7 +973,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x5_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_6x5_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">189</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_6x5_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">189</span></pre></dt>
   <dd>
     
     
@@ -980,7 +983,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x6_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x6_HDR"><span class="Identifier">MTLPixelFormatASTC_6x6_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">226</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x6_HDR"><span class="Identifier">MTLPixelFormatASTC_6x6_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">226</span></pre></dt>
   <dd>
     
     
@@ -990,7 +993,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x6_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x6_LDR"><span class="Identifier">MTLPixelFormatASTC_6x6_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">208</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x6_LDR"><span class="Identifier">MTLPixelFormatASTC_6x6_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">208</span></pre></dt>
   <dd>
     
     
@@ -1000,7 +1003,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_6x6_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_6x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_6x6_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">190</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_6x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_6x6_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">190</span></pre></dt>
   <dd>
     
     
@@ -1010,7 +1013,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x5_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x5_HDR"><span class="Identifier">MTLPixelFormatASTC_8x5_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">228</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x5_HDR"><span class="Identifier">MTLPixelFormatASTC_8x5_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">228</span></pre></dt>
   <dd>
     
     
@@ -1020,7 +1023,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x5_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x5_LDR"><span class="Identifier">MTLPixelFormatASTC_8x5_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">210</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x5_LDR"><span class="Identifier">MTLPixelFormatASTC_8x5_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">210</span></pre></dt>
   <dd>
     
     
@@ -1030,7 +1033,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x5_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x5_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">192</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x5_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">192</span></pre></dt>
   <dd>
     
     
@@ -1040,7 +1043,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x6_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x6_HDR"><span class="Identifier">MTLPixelFormatASTC_8x6_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">229</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x6_HDR"><span class="Identifier">MTLPixelFormatASTC_8x6_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">229</span></pre></dt>
   <dd>
     
     
@@ -1050,7 +1053,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x6_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x6_LDR"><span class="Identifier">MTLPixelFormatASTC_8x6_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">211</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x6_LDR"><span class="Identifier">MTLPixelFormatASTC_8x6_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">211</span></pre></dt>
   <dd>
     
     
@@ -1060,7 +1063,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x6_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x6_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">193</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x6_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">193</span></pre></dt>
   <dd>
     
     
@@ -1070,7 +1073,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x8_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x8_HDR"><span class="Identifier">MTLPixelFormatASTC_8x8_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">230</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x8_HDR"><span class="Identifier">MTLPixelFormatASTC_8x8_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">230</span></pre></dt>
   <dd>
     
     
@@ -1080,7 +1083,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x8_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x8_LDR"><span class="Identifier">MTLPixelFormatASTC_8x8_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">212</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x8_LDR"><span class="Identifier">MTLPixelFormatASTC_8x8_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">212</span></pre></dt>
   <dd>
     
     
@@ -1090,7 +1093,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_8x8_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_8x8_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x8_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">194</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_8x8_sRGB"><span class="Identifier">MTLPixelFormatASTC_8x8_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">194</span></pre></dt>
   <dd>
     
     
@@ -1100,7 +1103,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x5_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x5_HDR"><span class="Identifier">MTLPixelFormatASTC_10x5_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">231</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x5_HDR"><span class="Identifier">MTLPixelFormatASTC_10x5_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">231</span></pre></dt>
   <dd>
     
     
@@ -1110,7 +1113,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x5_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x5_LDR"><span class="Identifier">MTLPixelFormatASTC_10x5_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">213</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x5_LDR"><span class="Identifier">MTLPixelFormatASTC_10x5_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">213</span></pre></dt>
   <dd>
     
     
@@ -1120,7 +1123,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x5_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x5_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">195</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x5_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x5_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">195</span></pre></dt>
   <dd>
     
     
@@ -1130,7 +1133,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x6_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x6_HDR"><span class="Identifier">MTLPixelFormatASTC_10x6_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">232</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x6_HDR"><span class="Identifier">MTLPixelFormatASTC_10x6_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">232</span></pre></dt>
   <dd>
     
     
@@ -1140,7 +1143,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x6_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x6_LDR"><span class="Identifier">MTLPixelFormatASTC_10x6_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">214</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x6_LDR"><span class="Identifier">MTLPixelFormatASTC_10x6_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">214</span></pre></dt>
   <dd>
     
     
@@ -1150,7 +1153,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x6_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x6_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">196</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x6_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x6_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">196</span></pre></dt>
   <dd>
     
     
@@ -1160,7 +1163,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x8_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x8_HDR"><span class="Identifier">MTLPixelFormatASTC_10x8_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">233</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x8_HDR"><span class="Identifier">MTLPixelFormatASTC_10x8_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">233</span></pre></dt>
   <dd>
     
     
@@ -1170,7 +1173,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x8_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x8_LDR"><span class="Identifier">MTLPixelFormatASTC_10x8_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">215</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x8_LDR"><span class="Identifier">MTLPixelFormatASTC_10x8_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">215</span></pre></dt>
   <dd>
     
     
@@ -1180,7 +1183,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x8_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x8_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x8_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">197</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x8_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x8_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">197</span></pre></dt>
   <dd>
     
     
@@ -1190,7 +1193,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x10_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x10_HDR"><span class="Identifier">MTLPixelFormatASTC_10x10_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">234</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x10_HDR"><span class="Identifier">MTLPixelFormatASTC_10x10_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">234</span></pre></dt>
   <dd>
     
     
@@ -1200,7 +1203,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x10_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x10_LDR"><span class="Identifier">MTLPixelFormatASTC_10x10_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">216</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x10_LDR"><span class="Identifier">MTLPixelFormatASTC_10x10_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">216</span></pre></dt>
   <dd>
     
     
@@ -1210,7 +1213,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_10x10_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_10x10_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x10_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">198</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_10x10_sRGB"><span class="Identifier">MTLPixelFormatASTC_10x10_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">198</span></pre></dt>
   <dd>
     
     
@@ -1220,7 +1223,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x10_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x10_HDR"><span class="Identifier">MTLPixelFormatASTC_12x10_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">235</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x10_HDR"><span class="Identifier">MTLPixelFormatASTC_12x10_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">235</span></pre></dt>
   <dd>
     
     
@@ -1230,7 +1233,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x10_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x10_LDR"><span class="Identifier">MTLPixelFormatASTC_12x10_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">217</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x10_LDR"><span class="Identifier">MTLPixelFormatASTC_12x10_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">217</span></pre></dt>
   <dd>
     
     
@@ -1240,7 +1243,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x10_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x10_sRGB"><span class="Identifier">MTLPixelFormatASTC_12x10_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">199</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x10_sRGB"><span class="Identifier">MTLPixelFormatASTC_12x10_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">199</span></pre></dt>
   <dd>
     
     
@@ -1250,7 +1253,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x12_HDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x12_HDR"><span class="Identifier">MTLPixelFormatASTC_12x12_HDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">236</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x12_HDR"><span class="Identifier">MTLPixelFormatASTC_12x12_HDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">236</span></pre></dt>
   <dd>
     
     
@@ -1260,7 +1263,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x12_LDR">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x12_LDR"><span class="Identifier">MTLPixelFormatASTC_12x12_LDR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">218</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x12_LDR"><span class="Identifier">MTLPixelFormatASTC_12x12_LDR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">218</span></pre></dt>
   <dd>
     
     
@@ -1270,7 +1273,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatASTC_12x12_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatASTC_12x12_sRGB"><span class="Identifier">MTLPixelFormatASTC_12x12_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">200</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatASTC_12x12_sRGB"><span class="Identifier">MTLPixelFormatASTC_12x12_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">200</span></pre></dt>
   <dd>
     
     
@@ -1280,7 +1283,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatB5G6R5Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatB5G6R5Unorm"><span class="Identifier">MTLPixelFormatB5G6R5Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">40</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatB5G6R5Unorm"><span class="Identifier">MTLPixelFormatB5G6R5Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">40</span></pre></dt>
   <dd>
     
     
@@ -1290,7 +1293,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC1_RGBA">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC1_RGBA"><span class="Identifier">MTLPixelFormatBC1_RGBA</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">130</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC1_RGBA"><span class="Identifier">MTLPixelFormatBC1_RGBA</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">130</span></pre></dt>
   <dd>
     
     
@@ -1300,7 +1303,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC1_RGBA_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC1_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC1_RGBA_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">131</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC1_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC1_RGBA_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">131</span></pre></dt>
   <dd>
     
     
@@ -1310,7 +1313,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC2_RGBA">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC2_RGBA"><span class="Identifier">MTLPixelFormatBC2_RGBA</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">132</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC2_RGBA"><span class="Identifier">MTLPixelFormatBC2_RGBA</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">132</span></pre></dt>
   <dd>
     
     
@@ -1320,7 +1323,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC2_RGBA_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC2_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC2_RGBA_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">133</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC2_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC2_RGBA_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">133</span></pre></dt>
   <dd>
     
     
@@ -1330,7 +1333,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC3_RGBA">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC3_RGBA"><span class="Identifier">MTLPixelFormatBC3_RGBA</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">134</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC3_RGBA"><span class="Identifier">MTLPixelFormatBC3_RGBA</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">134</span></pre></dt>
   <dd>
     
     
@@ -1340,7 +1343,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC3_RGBA_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC3_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC3_RGBA_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">135</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC3_RGBA_sRGB"><span class="Identifier">MTLPixelFormatBC3_RGBA_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">135</span></pre></dt>
   <dd>
     
     
@@ -1350,7 +1353,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC4_RSnorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC4_RSnorm"><span class="Identifier">MTLPixelFormatBC4_RSnorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">141</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC4_RSnorm"><span class="Identifier">MTLPixelFormatBC4_RSnorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">141</span></pre></dt>
   <dd>
     
     
@@ -1360,7 +1363,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC4_RUnorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC4_RUnorm"><span class="Identifier">MTLPixelFormatBC4_RUnorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">140</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC4_RUnorm"><span class="Identifier">MTLPixelFormatBC4_RUnorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">140</span></pre></dt>
   <dd>
     
     
@@ -1370,7 +1373,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC5_RGSnorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC5_RGSnorm"><span class="Identifier">MTLPixelFormatBC5_RGSnorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">143</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC5_RGSnorm"><span class="Identifier">MTLPixelFormatBC5_RGSnorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">143</span></pre></dt>
   <dd>
     
     
@@ -1380,7 +1383,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC5_RGUnorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC5_RGUnorm"><span class="Identifier">MTLPixelFormatBC5_RGUnorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">142</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC5_RGUnorm"><span class="Identifier">MTLPixelFormatBC5_RGUnorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">142</span></pre></dt>
   <dd>
     
     
@@ -1390,7 +1393,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC6H_RGBFloat">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC6H_RGBFloat"><span class="Identifier">MTLPixelFormatBC6H_RGBFloat</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">150</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC6H_RGBFloat"><span class="Identifier">MTLPixelFormatBC6H_RGBFloat</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">150</span></pre></dt>
   <dd>
     
     
@@ -1400,7 +1403,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC6H_RGBUfloat">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC6H_RGBUfloat"><span class="Identifier">MTLPixelFormatBC6H_RGBUfloat</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">151</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC6H_RGBUfloat"><span class="Identifier">MTLPixelFormatBC6H_RGBUfloat</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">151</span></pre></dt>
   <dd>
     
     
@@ -1410,7 +1413,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC7_RGBAUnorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC7_RGBAUnorm"><span class="Identifier">MTLPixelFormatBC7_RGBAUnorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">152</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC7_RGBAUnorm"><span class="Identifier">MTLPixelFormatBC7_RGBAUnorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">152</span></pre></dt>
   <dd>
     
     
@@ -1420,7 +1423,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBC7_RGBAUnorm_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBC7_RGBAUnorm_sRGB"><span class="Identifier">MTLPixelFormatBC7_RGBAUnorm_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">153</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBC7_RGBAUnorm_sRGB"><span class="Identifier">MTLPixelFormatBC7_RGBAUnorm_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">153</span></pre></dt>
   <dd>
     
     
@@ -1430,7 +1433,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGR5A1Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGR5A1Unorm"><span class="Identifier">MTLPixelFormatBGR5A1Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">43</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGR5A1Unorm"><span class="Identifier">MTLPixelFormatBGR5A1Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">43</span></pre></dt>
   <dd>
     
     
@@ -1440,7 +1443,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGR10_XR">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGR10_XR"><span class="Identifier">MTLPixelFormatBGR10_XR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">554</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGR10_XR"><span class="Identifier">MTLPixelFormatBGR10_XR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">554</span></pre></dt>
   <dd>
     
     
@@ -1450,7 +1453,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGR10_XR_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGR10_XR_sRGB"><span class="Identifier">MTLPixelFormatBGR10_XR_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">555</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGR10_XR_sRGB"><span class="Identifier">MTLPixelFormatBGR10_XR_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">555</span></pre></dt>
   <dd>
     
     
@@ -1460,7 +1463,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGR10A2Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGR10A2Unorm"><span class="Identifier">MTLPixelFormatBGR10A2Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">94</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGR10A2Unorm"><span class="Identifier">MTLPixelFormatBGR10A2Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">94</span></pre></dt>
   <dd>
     
     
@@ -1470,7 +1473,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGRA8Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGRA8Unorm"><span class="Identifier">MTLPixelFormatBGRA8Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">80</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGRA8Unorm"><span class="Identifier">MTLPixelFormatBGRA8Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">80</span></pre></dt>
   <dd>
     
     
@@ -1480,7 +1483,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGRA8Unorm_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGRA8Unorm_sRGB"><span class="Identifier">MTLPixelFormatBGRA8Unorm_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">81</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGRA8Unorm_sRGB"><span class="Identifier">MTLPixelFormatBGRA8Unorm_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">81</span></pre></dt>
   <dd>
     
     
@@ -1490,7 +1493,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGRA10_XR">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGRA10_XR"><span class="Identifier">MTLPixelFormatBGRA10_XR</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">552</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGRA10_XR"><span class="Identifier">MTLPixelFormatBGRA10_XR</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">552</span></pre></dt>
   <dd>
     
     
@@ -1500,7 +1503,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGRA10_XR_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGRA10_XR_sRGB"><span class="Identifier">MTLPixelFormatBGRA10_XR_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">553</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGRA10_XR_sRGB"><span class="Identifier">MTLPixelFormatBGRA10_XR_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">553</span></pre></dt>
   <dd>
     
     
@@ -1510,7 +1513,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatBGRG422">
-  <dt><pre><a href="constants.html#MTLPixelFormatBGRG422"><span class="Identifier">MTLPixelFormatBGRG422</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">241</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatBGRG422"><span class="Identifier">MTLPixelFormatBGRG422</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">241</span></pre></dt>
   <dd>
     
     
@@ -1520,7 +1523,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatDepth16Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatDepth16Unorm"><span class="Identifier">MTLPixelFormatDepth16Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">250</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatDepth16Unorm"><span class="Identifier">MTLPixelFormatDepth16Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">250</span></pre></dt>
   <dd>
     
     
@@ -1530,7 +1533,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatDepth24Unorm_Stencil8">
-  <dt><pre><a href="constants.html#MTLPixelFormatDepth24Unorm_Stencil8"><span class="Identifier">MTLPixelFormatDepth24Unorm_Stencil8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">255</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatDepth24Unorm_Stencil8"><span class="Identifier">MTLPixelFormatDepth24Unorm_Stencil8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">255</span></pre></dt>
   <dd>
     
     
@@ -1540,7 +1543,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatDepth32Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatDepth32Float"><span class="Identifier">MTLPixelFormatDepth32Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">252</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatDepth32Float"><span class="Identifier">MTLPixelFormatDepth32Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">252</span></pre></dt>
   <dd>
     
     
@@ -1550,7 +1553,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatDepth32Float_Stencil8">
-  <dt><pre><a href="constants.html#MTLPixelFormatDepth32Float_Stencil8"><span class="Identifier">MTLPixelFormatDepth32Float_Stencil8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">260</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatDepth32Float_Stencil8"><span class="Identifier">MTLPixelFormatDepth32Float_Stencil8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">260</span></pre></dt>
   <dd>
     
     
@@ -1560,7 +1563,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_R11Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_R11Snorm"><span class="Identifier">MTLPixelFormatEAC_R11Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">172</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_R11Snorm"><span class="Identifier">MTLPixelFormatEAC_R11Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">172</span></pre></dt>
   <dd>
     
     
@@ -1570,7 +1573,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_R11Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_R11Unorm"><span class="Identifier">MTLPixelFormatEAC_R11Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">170</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_R11Unorm"><span class="Identifier">MTLPixelFormatEAC_R11Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">170</span></pre></dt>
   <dd>
     
     
@@ -1580,7 +1583,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_RG11Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_RG11Snorm"><span class="Identifier">MTLPixelFormatEAC_RG11Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">176</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_RG11Snorm"><span class="Identifier">MTLPixelFormatEAC_RG11Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">176</span></pre></dt>
   <dd>
     
     
@@ -1590,7 +1593,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_RG11Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_RG11Unorm"><span class="Identifier">MTLPixelFormatEAC_RG11Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">174</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_RG11Unorm"><span class="Identifier">MTLPixelFormatEAC_RG11Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">174</span></pre></dt>
   <dd>
     
     
@@ -1600,7 +1603,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_RGBA8">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_RGBA8"><span class="Identifier">MTLPixelFormatEAC_RGBA8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">178</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_RGBA8"><span class="Identifier">MTLPixelFormatEAC_RGBA8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">178</span></pre></dt>
   <dd>
     
     
@@ -1610,7 +1613,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatEAC_RGBA8_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatEAC_RGBA8_sRGB"><span class="Identifier">MTLPixelFormatEAC_RGBA8_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">179</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatEAC_RGBA8_sRGB"><span class="Identifier">MTLPixelFormatEAC_RGBA8_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">179</span></pre></dt>
   <dd>
     
     
@@ -1620,7 +1623,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatETC2_RGB8">
-  <dt><pre><a href="constants.html#MTLPixelFormatETC2_RGB8"><span class="Identifier">MTLPixelFormatETC2_RGB8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">180</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatETC2_RGB8"><span class="Identifier">MTLPixelFormatETC2_RGB8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">180</span></pre></dt>
   <dd>
     
     
@@ -1630,7 +1633,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatETC2_RGB8_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatETC2_RGB8_sRGB"><span class="Identifier">MTLPixelFormatETC2_RGB8_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">181</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatETC2_RGB8_sRGB"><span class="Identifier">MTLPixelFormatETC2_RGB8_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">181</span></pre></dt>
   <dd>
     
     
@@ -1640,7 +1643,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatETC2_RGB8A1">
-  <dt><pre><a href="constants.html#MTLPixelFormatETC2_RGB8A1"><span class="Identifier">MTLPixelFormatETC2_RGB8A1</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">182</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatETC2_RGB8A1"><span class="Identifier">MTLPixelFormatETC2_RGB8A1</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">182</span></pre></dt>
   <dd>
     
     
@@ -1650,7 +1653,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatETC2_RGB8A1_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatETC2_RGB8A1_sRGB"><span class="Identifier">MTLPixelFormatETC2_RGB8A1_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">183</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatETC2_RGB8A1_sRGB"><span class="Identifier">MTLPixelFormatETC2_RGB8A1_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">183</span></pre></dt>
   <dd>
     
     
@@ -1660,7 +1663,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatGBGR422">
-  <dt><pre><a href="constants.html#MTLPixelFormatGBGR422"><span class="Identifier">MTLPixelFormatGBGR422</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">240</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatGBGR422"><span class="Identifier">MTLPixelFormatGBGR422</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">240</span></pre></dt>
   <dd>
     
     
@@ -1670,7 +1673,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatInvalid">
-  <dt><pre><a href="constants.html#MTLPixelFormatInvalid"><span class="Identifier">MTLPixelFormatInvalid</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatInvalid"><span class="Identifier">MTLPixelFormatInvalid</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -1680,7 +1683,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGB_2BPP">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGB_2BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGB_2BPP</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">160</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGB_2BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGB_2BPP</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">160</span></pre></dt>
   <dd>
     
     
@@ -1690,7 +1693,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGB_2BPP_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGB_2BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGB_2BPP_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">161</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGB_2BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGB_2BPP_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">161</span></pre></dt>
   <dd>
     
     
@@ -1700,7 +1703,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGB_4BPP">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGB_4BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGB_4BPP</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">162</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGB_4BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGB_4BPP</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">162</span></pre></dt>
   <dd>
     
     
@@ -1710,7 +1713,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGB_4BPP_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGB_4BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGB_4BPP_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">163</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGB_4BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGB_4BPP_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">163</span></pre></dt>
   <dd>
     
     
@@ -1720,7 +1723,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGBA_2BPP">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGBA_2BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_2BPP</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">164</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGBA_2BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_2BPP</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">164</span></pre></dt>
   <dd>
     
     
@@ -1730,7 +1733,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGBA_2BPP_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGBA_2BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_2BPP_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">165</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGBA_2BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_2BPP_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">165</span></pre></dt>
   <dd>
     
     
@@ -1740,7 +1743,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGBA_4BPP">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGBA_4BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_4BPP</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">166</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGBA_4BPP"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_4BPP</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">166</span></pre></dt>
   <dd>
     
     
@@ -1750,7 +1753,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatPVRTC_RGBA_4BPP_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatPVRTC_RGBA_4BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_4BPP_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">167</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatPVRTC_RGBA_4BPP_sRGB"><span class="Identifier">MTLPixelFormatPVRTC_RGBA_4BPP_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">167</span></pre></dt>
   <dd>
     
     
@@ -1760,7 +1763,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR8Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR8Sint"><span class="Identifier">MTLPixelFormatR8Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">14</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR8Sint"><span class="Identifier">MTLPixelFormatR8Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">14</span></pre></dt>
   <dd>
     
     
@@ -1770,7 +1773,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR8Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatR8Snorm"><span class="Identifier">MTLPixelFormatR8Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">12</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR8Snorm"><span class="Identifier">MTLPixelFormatR8Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">12</span></pre></dt>
   <dd>
     
     
@@ -1780,7 +1783,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR8Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR8Uint"><span class="Identifier">MTLPixelFormatR8Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">13</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR8Uint"><span class="Identifier">MTLPixelFormatR8Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">13</span></pre></dt>
   <dd>
     
     
@@ -1790,7 +1793,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR8Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatR8Unorm"><span class="Identifier">MTLPixelFormatR8Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">10</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR8Unorm"><span class="Identifier">MTLPixelFormatR8Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">10</span></pre></dt>
   <dd>
     
     
@@ -1800,7 +1803,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR8Unorm_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatR8Unorm_sRGB"><span class="Identifier">MTLPixelFormatR8Unorm_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">11</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR8Unorm_sRGB"><span class="Identifier">MTLPixelFormatR8Unorm_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">11</span></pre></dt>
   <dd>
     
     
@@ -1810,7 +1813,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR16Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatR16Float"><span class="Identifier">MTLPixelFormatR16Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">25</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR16Float"><span class="Identifier">MTLPixelFormatR16Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">25</span></pre></dt>
   <dd>
     
     
@@ -1820,7 +1823,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR16Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR16Sint"><span class="Identifier">MTLPixelFormatR16Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">24</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR16Sint"><span class="Identifier">MTLPixelFormatR16Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">24</span></pre></dt>
   <dd>
     
     
@@ -1830,7 +1833,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR16Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatR16Snorm"><span class="Identifier">MTLPixelFormatR16Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">22</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR16Snorm"><span class="Identifier">MTLPixelFormatR16Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">22</span></pre></dt>
   <dd>
     
     
@@ -1840,7 +1843,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR16Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR16Uint"><span class="Identifier">MTLPixelFormatR16Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">23</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR16Uint"><span class="Identifier">MTLPixelFormatR16Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">23</span></pre></dt>
   <dd>
     
     
@@ -1850,7 +1853,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR16Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatR16Unorm"><span class="Identifier">MTLPixelFormatR16Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">20</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR16Unorm"><span class="Identifier">MTLPixelFormatR16Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">20</span></pre></dt>
   <dd>
     
     
@@ -1860,7 +1863,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR32Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatR32Float"><span class="Identifier">MTLPixelFormatR32Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">55</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR32Float"><span class="Identifier">MTLPixelFormatR32Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">55</span></pre></dt>
   <dd>
     
     
@@ -1870,7 +1873,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR32Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR32Sint"><span class="Identifier">MTLPixelFormatR32Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">54</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR32Sint"><span class="Identifier">MTLPixelFormatR32Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">54</span></pre></dt>
   <dd>
     
     
@@ -1880,7 +1883,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatR32Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatR32Uint"><span class="Identifier">MTLPixelFormatR32Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">53</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatR32Uint"><span class="Identifier">MTLPixelFormatR32Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">53</span></pre></dt>
   <dd>
     
     
@@ -1890,7 +1893,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG8Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG8Sint"><span class="Identifier">MTLPixelFormatRG8Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">34</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG8Sint"><span class="Identifier">MTLPixelFormatRG8Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">34</span></pre></dt>
   <dd>
     
     
@@ -1900,7 +1903,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG8Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG8Snorm"><span class="Identifier">MTLPixelFormatRG8Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">32</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG8Snorm"><span class="Identifier">MTLPixelFormatRG8Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">32</span></pre></dt>
   <dd>
     
     
@@ -1910,7 +1913,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG8Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG8Uint"><span class="Identifier">MTLPixelFormatRG8Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">33</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG8Uint"><span class="Identifier">MTLPixelFormatRG8Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">33</span></pre></dt>
   <dd>
     
     
@@ -1920,7 +1923,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG8Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG8Unorm"><span class="Identifier">MTLPixelFormatRG8Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">30</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG8Unorm"><span class="Identifier">MTLPixelFormatRG8Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">30</span></pre></dt>
   <dd>
     
     
@@ -1930,7 +1933,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG8Unorm_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG8Unorm_sRGB"><span class="Identifier">MTLPixelFormatRG8Unorm_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">31</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG8Unorm_sRGB"><span class="Identifier">MTLPixelFormatRG8Unorm_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">31</span></pre></dt>
   <dd>
     
     
@@ -1940,7 +1943,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG11B10Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG11B10Float"><span class="Identifier">MTLPixelFormatRG11B10Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">92</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG11B10Float"><span class="Identifier">MTLPixelFormatRG11B10Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">92</span></pre></dt>
   <dd>
     
     
@@ -1950,7 +1953,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG16Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG16Float"><span class="Identifier">MTLPixelFormatRG16Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">65</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG16Float"><span class="Identifier">MTLPixelFormatRG16Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">65</span></pre></dt>
   <dd>
     
     
@@ -1960,7 +1963,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG16Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG16Sint"><span class="Identifier">MTLPixelFormatRG16Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">64</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG16Sint"><span class="Identifier">MTLPixelFormatRG16Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">64</span></pre></dt>
   <dd>
     
     
@@ -1970,7 +1973,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG16Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG16Snorm"><span class="Identifier">MTLPixelFormatRG16Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">62</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG16Snorm"><span class="Identifier">MTLPixelFormatRG16Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">62</span></pre></dt>
   <dd>
     
     
@@ -1980,7 +1983,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG16Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG16Uint"><span class="Identifier">MTLPixelFormatRG16Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">63</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG16Uint"><span class="Identifier">MTLPixelFormatRG16Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">63</span></pre></dt>
   <dd>
     
     
@@ -1990,7 +1993,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG16Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG16Unorm"><span class="Identifier">MTLPixelFormatRG16Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">60</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG16Unorm"><span class="Identifier">MTLPixelFormatRG16Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">60</span></pre></dt>
   <dd>
     
     
@@ -2000,7 +2003,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG32Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG32Float"><span class="Identifier">MTLPixelFormatRG32Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">105</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG32Float"><span class="Identifier">MTLPixelFormatRG32Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">105</span></pre></dt>
   <dd>
     
     
@@ -2010,7 +2013,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG32Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG32Sint"><span class="Identifier">MTLPixelFormatRG32Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">104</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG32Sint"><span class="Identifier">MTLPixelFormatRG32Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">104</span></pre></dt>
   <dd>
     
     
@@ -2020,7 +2023,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRG32Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRG32Uint"><span class="Identifier">MTLPixelFormatRG32Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">103</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRG32Uint"><span class="Identifier">MTLPixelFormatRG32Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">103</span></pre></dt>
   <dd>
     
     
@@ -2030,7 +2033,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGB9E5Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGB9E5Float"><span class="Identifier">MTLPixelFormatRGB9E5Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">93</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGB9E5Float"><span class="Identifier">MTLPixelFormatRGB9E5Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">93</span></pre></dt>
   <dd>
     
     
@@ -2040,7 +2043,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGB10A2Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGB10A2Uint"><span class="Identifier">MTLPixelFormatRGB10A2Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">91</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGB10A2Uint"><span class="Identifier">MTLPixelFormatRGB10A2Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">91</span></pre></dt>
   <dd>
     
     
@@ -2050,7 +2053,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGB10A2Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGB10A2Unorm"><span class="Identifier">MTLPixelFormatRGB10A2Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">90</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGB10A2Unorm"><span class="Identifier">MTLPixelFormatRGB10A2Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">90</span></pre></dt>
   <dd>
     
     
@@ -2060,7 +2063,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA8Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA8Sint"><span class="Identifier">MTLPixelFormatRGBA8Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">74</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA8Sint"><span class="Identifier">MTLPixelFormatRGBA8Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">74</span></pre></dt>
   <dd>
     
     
@@ -2070,7 +2073,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA8Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA8Snorm"><span class="Identifier">MTLPixelFormatRGBA8Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">72</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA8Snorm"><span class="Identifier">MTLPixelFormatRGBA8Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">72</span></pre></dt>
   <dd>
     
     
@@ -2080,7 +2083,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA8Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA8Uint"><span class="Identifier">MTLPixelFormatRGBA8Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">73</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA8Uint"><span class="Identifier">MTLPixelFormatRGBA8Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">73</span></pre></dt>
   <dd>
     
     
@@ -2090,7 +2093,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA8Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA8Unorm"><span class="Identifier">MTLPixelFormatRGBA8Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">70</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA8Unorm"><span class="Identifier">MTLPixelFormatRGBA8Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">70</span></pre></dt>
   <dd>
     
     
@@ -2100,7 +2103,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA8Unorm_sRGB">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA8Unorm_sRGB"><span class="Identifier">MTLPixelFormatRGBA8Unorm_sRGB</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">71</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA8Unorm_sRGB"><span class="Identifier">MTLPixelFormatRGBA8Unorm_sRGB</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">71</span></pre></dt>
   <dd>
     
     
@@ -2110,7 +2113,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA16Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA16Float"><span class="Identifier">MTLPixelFormatRGBA16Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">115</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA16Float"><span class="Identifier">MTLPixelFormatRGBA16Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">115</span></pre></dt>
   <dd>
     
     
@@ -2120,7 +2123,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA16Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA16Sint"><span class="Identifier">MTLPixelFormatRGBA16Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">114</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA16Sint"><span class="Identifier">MTLPixelFormatRGBA16Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">114</span></pre></dt>
   <dd>
     
     
@@ -2130,7 +2133,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA16Snorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA16Snorm"><span class="Identifier">MTLPixelFormatRGBA16Snorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">112</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA16Snorm"><span class="Identifier">MTLPixelFormatRGBA16Snorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">112</span></pre></dt>
   <dd>
     
     
@@ -2140,7 +2143,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA16Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA16Uint"><span class="Identifier">MTLPixelFormatRGBA16Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">113</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA16Uint"><span class="Identifier">MTLPixelFormatRGBA16Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">113</span></pre></dt>
   <dd>
     
     
@@ -2150,7 +2153,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA16Unorm">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA16Unorm"><span class="Identifier">MTLPixelFormatRGBA16Unorm</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">110</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA16Unorm"><span class="Identifier">MTLPixelFormatRGBA16Unorm</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">110</span></pre></dt>
   <dd>
     
     
@@ -2160,7 +2163,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA32Float">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA32Float"><span class="Identifier">MTLPixelFormatRGBA32Float</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">125</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA32Float"><span class="Identifier">MTLPixelFormatRGBA32Float</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">125</span></pre></dt>
   <dd>
     
     
@@ -2170,7 +2173,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA32Sint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA32Sint"><span class="Identifier">MTLPixelFormatRGBA32Sint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">124</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA32Sint"><span class="Identifier">MTLPixelFormatRGBA32Sint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">124</span></pre></dt>
   <dd>
     
     
@@ -2180,7 +2183,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatRGBA32Uint">
-  <dt><pre><a href="constants.html#MTLPixelFormatRGBA32Uint"><span class="Identifier">MTLPixelFormatRGBA32Uint</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">123</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatRGBA32Uint"><span class="Identifier">MTLPixelFormatRGBA32Uint</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">123</span></pre></dt>
   <dd>
     
     
@@ -2190,7 +2193,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatStencil8">
-  <dt><pre><a href="constants.html#MTLPixelFormatStencil8"><span class="Identifier">MTLPixelFormatStencil8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">253</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatStencil8"><span class="Identifier">MTLPixelFormatStencil8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">253</span></pre></dt>
   <dd>
     
     
@@ -2200,7 +2203,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatX24_Stencil8">
-  <dt><pre><a href="constants.html#MTLPixelFormatX24_Stencil8"><span class="Identifier">MTLPixelFormatX24_Stencil8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">262</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatX24_Stencil8"><span class="Identifier">MTLPixelFormatX24_Stencil8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">262</span></pre></dt>
   <dd>
     
     
@@ -2210,7 +2213,7 @@
   </dd>
 </div>
 <div id="MTLPixelFormatX32_Stencil8">
-  <dt><pre><a href="constants.html#MTLPixelFormatX32_Stencil8"><span class="Identifier">MTLPixelFormatX32_Stencil8</span></a><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">261</span></pre></dt>
+  <dt><pre><a href="#MTLPixelFormatX32_Stencil8"><span class="Identifier">MTLPixelFormatX32_Stencil8</span></a><span class="Other">:</span> <a href="#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">261</span></pre></dt>
   <dd>
     
     
@@ -2220,7 +2223,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveTypeLine">
-  <dt><pre><a href="constants.html#MTLPrimitiveTypeLine"><span class="Identifier">MTLPrimitiveTypeLine</span></a><span class="Other">:</span> <a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveTypeLine"><span class="Identifier">MTLPrimitiveTypeLine</span></a><span class="Other">:</span> <a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2230,7 +2233,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveTypeLineStrip">
-  <dt><pre><a href="constants.html#MTLPrimitiveTypeLineStrip"><span class="Identifier">MTLPrimitiveTypeLineStrip</span></a><span class="Other">:</span> <a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveTypeLineStrip"><span class="Identifier">MTLPrimitiveTypeLineStrip</span></a><span class="Other">:</span> <a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -2240,7 +2243,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveTypePoint">
-  <dt><pre><a href="constants.html#MTLPrimitiveTypePoint"><span class="Identifier">MTLPrimitiveTypePoint</span></a><span class="Other">:</span> <a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveTypePoint"><span class="Identifier">MTLPrimitiveTypePoint</span></a><span class="Other">:</span> <a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2250,7 +2253,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveTypeTriangle">
-  <dt><pre><a href="constants.html#MTLPrimitiveTypeTriangle"><span class="Identifier">MTLPrimitiveTypeTriangle</span></a><span class="Other">:</span> <a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveTypeTriangle"><span class="Identifier">MTLPrimitiveTypeTriangle</span></a><span class="Other">:</span> <a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -2260,7 +2263,7 @@
   </dd>
 </div>
 <div id="MTLPrimitiveTypeTriangleStrip">
-  <dt><pre><a href="constants.html#MTLPrimitiveTypeTriangleStrip"><span class="Identifier">MTLPrimitiveTypeTriangleStrip</span></a><span class="Other">:</span> <a href="constants.html#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLPrimitiveTypeTriangleStrip"><span class="Identifier">MTLPrimitiveTypeTriangleStrip</span></a><span class="Other">:</span> <a href="#MTLPrimitiveType"><span class="Identifier">MTLPrimitiveType</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -2270,7 +2273,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeClampToBorderColor">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeClampToBorderColor"><span class="Identifier">MTLSamplerAddressModeClampToBorderColor</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeClampToBorderColor"><span class="Identifier">MTLSamplerAddressModeClampToBorderColor</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
   <dd>
     
     
@@ -2280,7 +2283,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeClampToEdge">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeClampToEdge"><span class="Identifier">MTLSamplerAddressModeClampToEdge</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeClampToEdge"><span class="Identifier">MTLSamplerAddressModeClampToEdge</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2290,7 +2293,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeClampToZero">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeClampToZero"><span class="Identifier">MTLSamplerAddressModeClampToZero</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeClampToZero"><span class="Identifier">MTLSamplerAddressModeClampToZero</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -2300,7 +2303,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeMirrorClampToEdge">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeMirrorClampToEdge"><span class="Identifier">MTLSamplerAddressModeMirrorClampToEdge</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeMirrorClampToEdge"><span class="Identifier">MTLSamplerAddressModeMirrorClampToEdge</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2310,7 +2313,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeMirrorRepeat">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeMirrorRepeat"><span class="Identifier">MTLSamplerAddressModeMirrorRepeat</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeMirrorRepeat"><span class="Identifier">MTLSamplerAddressModeMirrorRepeat</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -2320,7 +2323,7 @@
   </dd>
 </div>
 <div id="MTLSamplerAddressModeRepeat">
-  <dt><pre><a href="constants.html#MTLSamplerAddressModeRepeat"><span class="Identifier">MTLSamplerAddressModeRepeat</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerAddressModeRepeat"><span class="Identifier">MTLSamplerAddressModeRepeat</span></a><span class="Other">:</span> <a href="#MTLSamplerAddressMode"><span class="Identifier">MTLSamplerAddressMode</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -2330,7 +2333,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMinMagFilterLinear">
-  <dt><pre><a href="constants.html#MTLSamplerMinMagFilterLinear"><span class="Identifier">MTLSamplerMinMagFilterLinear</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMinMagFilterLinear"><span class="Identifier">MTLSamplerMinMagFilterLinear</span></a><span class="Other">:</span> <a href="#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2340,7 +2343,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMinMagFilterNearest">
-  <dt><pre><a href="constants.html#MTLSamplerMinMagFilterNearest"><span class="Identifier">MTLSamplerMinMagFilterNearest</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMinMagFilterNearest"><span class="Identifier">MTLSamplerMinMagFilterNearest</span></a><span class="Other">:</span> <a href="#MTLSamplerMinMagFilter"><span class="Identifier">MTLSamplerMinMagFilter</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2350,7 +2353,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMipFilterLinear">
-  <dt><pre><a href="constants.html#MTLSamplerMipFilterLinear"><span class="Identifier">MTLSamplerMipFilterLinear</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMipFilterLinear"><span class="Identifier">MTLSamplerMipFilterLinear</span></a><span class="Other">:</span> <a href="#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -2360,7 +2363,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMipFilterNearest">
-  <dt><pre><a href="constants.html#MTLSamplerMipFilterNearest"><span class="Identifier">MTLSamplerMipFilterNearest</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMipFilterNearest"><span class="Identifier">MTLSamplerMipFilterNearest</span></a><span class="Other">:</span> <a href="#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2370,7 +2373,7 @@
   </dd>
 </div>
 <div id="MTLSamplerMipFilterNotMipmapped">
-  <dt><pre><a href="constants.html#MTLSamplerMipFilterNotMipmapped"><span class="Identifier">MTLSamplerMipFilterNotMipmapped</span></a><span class="Other">:</span> <a href="constants.html#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLSamplerMipFilterNotMipmapped"><span class="Identifier">MTLSamplerMipFilterNotMipmapped</span></a><span class="Other">:</span> <a href="#MTLSamplerMipFilter"><span class="Identifier">MTLSamplerMipFilter</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2380,7 +2383,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionCustomSampleDepthStore">
-  <dt><pre><a href="constants.html#MTLStoreActionCustomSampleDepthStore"><span class="Identifier">MTLStoreActionCustomSampleDepthStore</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionCustomSampleDepthStore"><span class="Identifier">MTLStoreActionCustomSampleDepthStore</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">5</span></pre></dt>
   <dd>
     
     
@@ -2390,7 +2393,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionDontCare">
-  <dt><pre><a href="constants.html#MTLStoreActionDontCare"><span class="Identifier">MTLStoreActionDontCare</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionDontCare"><span class="Identifier">MTLStoreActionDontCare</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2400,7 +2403,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionMultisampleResolve">
-  <dt><pre><a href="constants.html#MTLStoreActionMultisampleResolve"><span class="Identifier">MTLStoreActionMultisampleResolve</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionMultisampleResolve"><span class="Identifier">MTLStoreActionMultisampleResolve</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">2</span></pre></dt>
   <dd>
     
     
@@ -2410,7 +2413,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionStore">
-  <dt><pre><a href="constants.html#MTLStoreActionStore"><span class="Identifier">MTLStoreActionStore</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionStore"><span class="Identifier">MTLStoreActionStore</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2420,7 +2423,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionStoreAndMultisampleResolve">
-  <dt><pre><a href="constants.html#MTLStoreActionStoreAndMultisampleResolve"><span class="Identifier">MTLStoreActionStoreAndMultisampleResolve</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionStoreAndMultisampleResolve"><span class="Identifier">MTLStoreActionStoreAndMultisampleResolve</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">3</span></pre></dt>
   <dd>
     
     
@@ -2430,7 +2433,7 @@
   </dd>
 </div>
 <div id="MTLStoreActionUnknown">
-  <dt><pre><a href="constants.html#MTLStoreActionUnknown"><span class="Identifier">MTLStoreActionUnknown</span></a><span class="Other">:</span> <a href="constants.html#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
+  <dt><pre><a href="#MTLStoreActionUnknown"><span class="Identifier">MTLStoreActionUnknown</span></a><span class="Other">:</span> <a href="#MTLStoreAction"><span class="Identifier">MTLStoreAction</span></a> <span class="Other">=</span> <span class="DecNumber">4</span></pre></dt>
   <dd>
     
     
@@ -2440,7 +2443,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsagePixelFormatView">
-  <dt><pre><a href="constants.html#MTLTextureUsagePixelFormatView"><span class="Identifier">MTLTextureUsagePixelFormatView</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000010</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsagePixelFormatView"><span class="Identifier">MTLTextureUsagePixelFormatView</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000010</span></pre></dt>
   <dd>
     
     
@@ -2450,7 +2453,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsageRenderTarget">
-  <dt><pre><a href="constants.html#MTLTextureUsageRenderTarget"><span class="Identifier">MTLTextureUsageRenderTarget</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000004</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsageRenderTarget"><span class="Identifier">MTLTextureUsageRenderTarget</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000004</span></pre></dt>
   <dd>
     
     
@@ -2460,7 +2463,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsageShaderAtomic">
-  <dt><pre><a href="constants.html#MTLTextureUsageShaderAtomic"><span class="Identifier">MTLTextureUsageShaderAtomic</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000020</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsageShaderAtomic"><span class="Identifier">MTLTextureUsageShaderAtomic</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000020</span></pre></dt>
   <dd>
     
     
@@ -2470,7 +2473,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsageShaderRead">
-  <dt><pre><a href="constants.html#MTLTextureUsageShaderRead"><span class="Identifier">MTLTextureUsageShaderRead</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000001</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsageShaderRead"><span class="Identifier">MTLTextureUsageShaderRead</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000001</span></pre></dt>
   <dd>
     
     
@@ -2480,7 +2483,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsageShaderWrite">
-  <dt><pre><a href="constants.html#MTLTextureUsageShaderWrite"><span class="Identifier">MTLTextureUsageShaderWrite</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000002</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsageShaderWrite"><span class="Identifier">MTLTextureUsageShaderWrite</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000002</span></pre></dt>
   <dd>
     
     
@@ -2490,7 +2493,7 @@
   </dd>
 </div>
 <div id="MTLTextureUsageUnknown">
-  <dt><pre><a href="constants.html#MTLTextureUsageUnknown"><span class="Identifier">MTLTextureUsageUnknown</span></a><span class="Other">:</span> <a href="constants.html#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000000</span></pre></dt>
+  <dt><pre><a href="#MTLTextureUsageUnknown"><span class="Identifier">MTLTextureUsageUnknown</span></a><span class="Other">:</span> <a href="#MTLTextureUsage"><span class="Identifier">MTLTextureUsage</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000000</span></pre></dt>
   <dd>
     
     
@@ -2500,7 +2503,7 @@
   </dd>
 </div>
 <div id="MTLWindingClockwise">
-  <dt><pre><a href="constants.html#MTLWindingClockwise"><span class="Identifier">MTLWindingClockwise</span></a><span class="Other">:</span> <a href="constants.html#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
+  <dt><pre><a href="#MTLWindingClockwise"><span class="Identifier">MTLWindingClockwise</span></a><span class="Other">:</span> <a href="#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="DecNumber">0</span></pre></dt>
   <dd>
     
     
@@ -2510,7 +2513,7 @@
   </dd>
 </div>
 <div id="MTLWindingCounterClockwise">
-  <dt><pre><a href="constants.html#MTLWindingCounterClockwise"><span class="Identifier">MTLWindingCounterClockwise</span></a><span class="Other">:</span> <a href="constants.html#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
+  <dt><pre><a href="#MTLWindingCounterClockwise"><span class="Identifier">MTLWindingCounterClockwise</span></a><span class="Other">:</span> <a href="#MTLWinding"><span class="Identifier">MTLWinding</span></a> <span class="Other">=</span> <span class="DecNumber">1</span></pre></dt>
   <dd>
     
     
@@ -2525,7 +2528,7 @@
 <div class="section" id="19">
   <h1><a class="toc-backref" href="#19">Exports</a></h1>
   <dl class="item">
-    <a href="codes.html#Metal4Error"><span class="Identifier">Metal4Error</span></a>, <a href="codes.html#checkNil,T,string"><span class="Identifier">checkNil</span></a>, <a href="codes.html#messageNSError,NSError,string"><span class="Identifier">messageNSError</span></a>, <a href="codes.html#checkNSError,NSError,string"><span class="Identifier">checkNSError</span></a>, <a href="codes.html#isNil,T"><span class="Identifier">isNil</span></a>, <a href="runtime.html#CALayer"><span class="Identifier">CALayer</span></a>
+    <a href="codes.html#Metal4Error"><span class="Identifier">Metal4Error</span></a>, <a href="codes.html#messageNSError,NSError,string"><span class="Identifier">messageNSError</span></a>, <a href="codes.html#isNil,T"><span class="Identifier">isNil</span></a>, <a href="codes.html#checkNil,T,string"><span class="Identifier">checkNil</span></a>, <a href="codes.html#checkNSError,NSError,string"><span class="Identifier">checkNSError</span></a>, <a href="runtime.html#CALayer"><span class="Identifier">CALayer</span></a>
   </dl>
 </div>
 
@@ -2535,7 +2538,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-03-18 13:55:43 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-08-23 20:46:42 UTC</small>
       </div>
     </div>
   </div>
