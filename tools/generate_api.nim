@@ -21,7 +21,11 @@ const
     "MTLTextureUsage",
     "MTLCompareFunction",
     "MTLWinding",
-    "MTLCullMode"
+    "MTLCullMode",
+    "MTLCommandBufferStatus",
+    "MTLStorageMode",
+    "MTLVertexFormat",
+    "MTLVertexStepFunction"
   ]
 
   TargetStructs = [
@@ -46,6 +50,12 @@ const
     "MTLDepthStencilState",
     "MTLCommandEncoder",
     "MTLRenderCommandEncoder",
+    "MTLBlitCommandEncoder",
+    "MTLVertexDescriptor",
+    "MTLVertexBufferLayoutDescriptor",
+    "MTLVertexBufferLayoutDescriptorArray",
+    "MTLVertexAttributeDescriptor",
+    "MTLVertexAttributeDescriptorArray",
     "MTLRenderPipelineColorAttachmentDescriptor",
     "MTLRenderPipelineColorAttachmentDescriptorArray",
     "MTLRenderPipelineDescriptor",
@@ -61,6 +71,9 @@ const
   ]
 
   TargetProperties = [
+    ("MTLDevice", "name"),
+    ("MTLCommandBuffer", "status"),
+    ("MTLCommandBuffer", "error"),
     ("CAMetalDrawable", "texture"),
     ("CAMetalDrawable", "layer"),
     ("CAMetalLayer", "device"),
@@ -68,6 +81,19 @@ const
     ("CAMetalLayer", "framebufferOnly"),
     ("CAMetalLayer", "drawableSize"),
     ("MTLTextureDescriptor", "usage"),
+    ("MTLTextureDescriptor", "storageMode"),
+    ("MTLTextureDescriptor", "mipmapLevelCount"),
+    ("MTLTexture", "width"),
+    ("MTLTexture", "height"),
+    ("MTLTexture", "mipmapLevelCount"),
+    ("MTLVertexDescriptor", "layouts"),
+    ("MTLVertexDescriptor", "attributes"),
+    ("MTLVertexBufferLayoutDescriptor", "stride"),
+    ("MTLVertexBufferLayoutDescriptor", "stepFunction"),
+    ("MTLVertexAttributeDescriptor", "format"),
+    ("MTLVertexAttributeDescriptor", "offset"),
+    ("MTLVertexAttributeDescriptor", "bufferIndex"),
+    ("MTLRenderPipelineDescriptor", "vertexDescriptor"),
     ("MTLRenderPipelineDescriptor", "vertexFunction"),
     ("MTLRenderPipelineDescriptor", "fragmentFunction"),
     ("MTLRenderPipelineDescriptor", "colorAttachments"),
@@ -112,11 +138,18 @@ const
     ("MTLCommandBuffer", "renderCommandEncoderWithDescriptor", "renderCommandEncoderWithDescriptor:"),
     ("MTLCommandBuffer", "presentDrawable", "presentDrawable:"),
     ("MTLCommandBuffer", "commit", "commit"),
+    ("MTLCommandBuffer", "waitUntilCompleted", "waitUntilCompleted"),
+    ("MTLCommandBuffer", "blitCommandEncoder", "blitCommandEncoder"),
+    ("MTLBlitCommandEncoder", "generateMipmapsForTexture", "generateMipmapsForTexture:"),
+    ("MTLVertexDescriptor", "vertexDescriptor", "vertexDescriptor"),
+    ("MTLVertexBufferLayoutDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
+    ("MTLVertexAttributeDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPassColorAttachmentDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPipelineColorAttachmentDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPassDescriptor", "renderPassDescriptor", "renderPassDescriptor"),
     ("MTLTextureDescriptor", "texture2DDescriptorWithPixelFormat", "texture2DDescriptorWithPixelFormat:width:height:mipmapped:"),
     ("MTLTexture", "replaceRegion", "replaceRegion:mipmapLevel:withBytes:bytesPerRow:"),
+    ("MTLTexture", "getBytes", "getBytes:bytesPerRow:fromRegion:mipmapLevel:"),
     ("MTLCommandEncoder", "endEncoding", "endEncoding"),
     ("MTLRenderCommandEncoder", "setRenderPipelineState", "setRenderPipelineState:"),
     ("MTLRenderCommandEncoder", "setViewport", "setViewport:"),
@@ -124,6 +157,7 @@ const
     ("MTLRenderCommandEncoder", "setFrontFacingWinding", "setFrontFacingWinding:"),
     ("MTLRenderCommandEncoder", "setDepthStencilState", "setDepthStencilState:"),
     ("MTLRenderCommandEncoder", "setVertexBytes", "setVertexBytes:length:atIndex:"),
+    ("MTLRenderCommandEncoder", "setFragmentBytes", "setFragmentBytes:length:atIndex:"),
     ("MTLRenderCommandEncoder", "setVertexBuffer", "setVertexBuffer:offset:atIndex:"),
     ("MTLRenderCommandEncoder", "setFragmentTexture", "setFragmentTexture:atIndex:"),
     ("MTLRenderCommandEncoder", "setFragmentSamplerState", "setFragmentSamplerState:atIndex:"),
@@ -134,7 +168,10 @@ const
     "CAMetalLayer",
     "MTLRenderPipelineDescriptor",
     "MTLSamplerDescriptor",
-    "MTLDepthStencilDescriptor"
+    "MTLDepthStencilDescriptor",
+    "MTLVertexDescriptor",
+    "MTLVertexBufferLayoutDescriptor",
+    "MTLVertexAttributeDescriptor"
   ]
 
   NimKeywords = [
@@ -417,6 +454,12 @@ proc generateProtocols(ir: HeaderIr): string =
     "  encoder: MTLRenderCommandEncoder",
     "): MTLCommandEncoder =",
     "  ## Converts the render encoder to its command-encoder base type.",
+    "  cast[MTLCommandEncoder](encoder)",
+    "",
+    "converter toMTLCommandEncoder*(",
+    "  encoder: MTLBlitCommandEncoder",
+    "): MTLCommandEncoder =",
+    "  ## Converts the blit encoder to its command-encoder base type.",
     "  cast[MTLCommandEncoder](encoder)",
     "",
     "objc:"
