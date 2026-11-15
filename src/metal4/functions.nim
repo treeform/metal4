@@ -8,6 +8,5 @@ export types
 ## Returns the preferred system Metal device.
 proc MTLCreateSystemDefaultDevice*(): MTLDevice {.
   importc,
-  cdecl,
-  dynlib: "/System/Library/Frameworks/Metal.framework/Metal"
+  cdecl
 .}

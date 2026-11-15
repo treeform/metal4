@@ -19,9 +19,15 @@
     "MTLRenderPipeline.h",
     "MTLSampler.h",
     "MTLTexture.h",
-    "MTLTypes.h"
+    "MTLTypes.h",
+    "MTLVertexDescriptor.h"
   ],
   "quartzCoreHeaders": [
     "CAMetalLayer.h"
-  ]
+  ],
+  "additionalHeaders": {
+    "MTLVertexDescriptor.h": {
+      "sdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk"
+    }
+  }
 }

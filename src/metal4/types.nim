@@ -22,6 +22,11 @@ type
   MTLRenderPipelineColorAttachmentDescriptor* = distinct NSObject
   MTLRenderPipelineColorAttachmentDescriptorArray* = distinct NSObject
   MTLRenderPipelineDescriptor* = distinct NSObject
+  MTLVertexDescriptor* = distinct NSObject
+  MTLVertexAttributeDescriptor* = distinct NSObject
+  MTLVertexAttributeDescriptorArray* = distinct NSObject
+  MTLVertexBufferLayoutDescriptor* = distinct NSObject
+  MTLVertexBufferLayoutDescriptorArray* = distinct NSObject
   MTLRenderPassAttachmentDescriptor* = distinct NSObject
   MTLRenderPassColorAttachmentDescriptor* = distinct MTLRenderPassAttachmentDescriptor
   MTLRenderPassColorAttachmentDescriptorArray* = distinct NSObject

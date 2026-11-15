@@ -1979,6 +1979,256 @@
           "value": "1"
         }
       ]
+    },
+    {
+      "name": "MTLVertexFormat",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLVertexFormatInvalid",
+          "value": "0"
+        },
+        {
+          "name": "MTLVertexFormatUChar2",
+          "value": "1"
+        },
+        {
+          "name": "MTLVertexFormatUChar3",
+          "value": "2"
+        },
+        {
+          "name": "MTLVertexFormatUChar4",
+          "value": "3"
+        },
+        {
+          "name": "MTLVertexFormatChar2",
+          "value": "4"
+        },
+        {
+          "name": "MTLVertexFormatChar3",
+          "value": "5"
+        },
+        {
+          "name": "MTLVertexFormatChar4",
+          "value": "6"
+        },
+        {
+          "name": "MTLVertexFormatUChar2Normalized",
+          "value": "7"
+        },
+        {
+          "name": "MTLVertexFormatUChar3Normalized",
+          "value": "8"
+        },
+        {
+          "name": "MTLVertexFormatUChar4Normalized",
+          "value": "9"
+        },
+        {
+          "name": "MTLVertexFormatChar2Normalized",
+          "value": "10"
+        },
+        {
+          "name": "MTLVertexFormatChar3Normalized",
+          "value": "11"
+        },
+        {
+          "name": "MTLVertexFormatChar4Normalized",
+          "value": "12"
+        },
+        {
+          "name": "MTLVertexFormatUShort2",
+          "value": "13"
+        },
+        {
+          "name": "MTLVertexFormatUShort3",
+          "value": "14"
+        },
+        {
+          "name": "MTLVertexFormatUShort4",
+          "value": "15"
+        },
+        {
+          "name": "MTLVertexFormatShort2",
+          "value": "16"
+        },
+        {
+          "name": "MTLVertexFormatShort3",
+          "value": "17"
+        },
+        {
+          "name": "MTLVertexFormatShort4",
+          "value": "18"
+        },
+        {
+          "name": "MTLVertexFormatUShort2Normalized",
+          "value": "19"
+        },
+        {
+          "name": "MTLVertexFormatUShort3Normalized",
+          "value": "20"
+        },
+        {
+          "name": "MTLVertexFormatUShort4Normalized",
+          "value": "21"
+        },
+        {
+          "name": "MTLVertexFormatShort2Normalized",
+          "value": "22"
+        },
+        {
+          "name": "MTLVertexFormatShort3Normalized",
+          "value": "23"
+        },
+        {
+          "name": "MTLVertexFormatShort4Normalized",
+          "value": "24"
+        },
+        {
+          "name": "MTLVertexFormatHalf2",
+          "value": "25"
+        },
+        {
+          "name": "MTLVertexFormatHalf3",
+          "value": "26"
+        },
+        {
+          "name": "MTLVertexFormatHalf4",
+          "value": "27"
+        },
+        {
+          "name": "MTLVertexFormatFloat",
+          "value": "28"
+        },
+        {
+          "name": "MTLVertexFormatFloat2",
+          "value": "29"
+        },
+        {
+          "name": "MTLVertexFormatFloat3",
+          "value": "30"
+        },
+        {
+          "name": "MTLVertexFormatFloat4",
+          "value": "31"
+        },
+        {
+          "name": "MTLVertexFormatInt",
+          "value": "32"
+        },
+        {
+          "name": "MTLVertexFormatInt2",
+          "value": "33"
+        },
+        {
+          "name": "MTLVertexFormatInt3",
+          "value": "34"
+        },
+        {
+          "name": "MTLVertexFormatInt4",
+          "value": "35"
+        },
+        {
+          "name": "MTLVertexFormatUInt",
+          "value": "36"
+        },
+        {
+          "name": "MTLVertexFormatUInt2",
+          "value": "37"
+        },
+        {
+          "name": "MTLVertexFormatUInt3",
+          "value": "38"
+        },
+        {
+          "name": "MTLVertexFormatUInt4",
+          "value": "39"
+        },
+        {
+          "name": "MTLVertexFormatInt1010102Normalized",
+          "value": "40"
+        },
+        {
+          "name": "MTLVertexFormatUInt1010102Normalized",
+          "value": "41"
+        },
+        {
+          "name": "MTLVertexFormatUChar4Normalized_BGRA",
+          "value": "42"
+        },
+        {
+          "name": "MTLVertexFormatUChar",
+          "value": "45"
+        },
+        {
+          "name": "MTLVertexFormatChar",
+          "value": "46"
+        },
+        {
+          "name": "MTLVertexFormatUCharNormalized",
+          "value": "47"
+        },
+        {
+          "name": "MTLVertexFormatCharNormalized",
+          "value": "48"
+        },
+        {
+          "name": "MTLVertexFormatUShort",
+          "value": "49"
+        },
+        {
+          "name": "MTLVertexFormatShort",
+          "value": "50"
+        },
+        {
+          "name": "MTLVertexFormatUShortNormalized",
+          "value": "51"
+        },
+        {
+          "name": "MTLVertexFormatShortNormalized",
+          "value": "52"
+        },
+        {
+          "name": "MTLVertexFormatHalf",
+          "value": "53"
+        },
+        {
+          "name": "MTLVertexFormatFloatRG11B10",
+          "value": "54"
+        },
+        {
+          "name": "MTLVertexFormatFloatRGB9E5",
+          "value": "55"
+        }
+      ]
+    },
+    {
+      "name": "MTLVertexStepFunction",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLVertexStepFunctionConstant",
+          "value": "0"
+        },
+        {
+          "name": "MTLVertexStepFunctionPerVertex",
+          "value": "1"
+        },
+        {
+          "name": "MTLVertexStepFunctionPerInstance",
+          "value": "2"
+        },
+        {
+          "name": "MTLVertexStepFunctionPerPatch",
+          "value": "3"
+        },
+        {
+          "name": "MTLVertexStepFunctionPerPatchControlPoint",
+          "value": "4"
+        }
+      ]
     }
   ],
   "structs": [
@@ -2572,7 +2822,7 @@
     {
       "name": "MTLVertexDescriptor",
       "kind": "class",
-      "baseName": "NSObject"
+      "baseName": "NSObject <NSCopying>"
     },
     {
       "name": "MTLRenderPipelineColorAttachmentDescriptorArray",
@@ -2607,6 +2857,26 @@
     {
       "name": "MTLTexture",
       "kind": "protocol",
+      "baseName": "NSObject"
+    },
+    {
+      "name": "MTLVertexBufferLayoutDescriptor",
+      "kind": "class",
+      "baseName": "NSObject <NSCopying>"
+    },
+    {
+      "name": "MTLVertexBufferLayoutDescriptorArray",
+      "kind": "class",
+      "baseName": "NSObject"
+    },
+    {
+      "name": "MTLVertexAttributeDescriptor",
+      "kind": "class",
+      "baseName": "NSObject <NSCopying>"
+    },
+    {
+      "name": "MTLVertexAttributeDescriptorArray",
+      "kind": "class",
       "baseName": "NSObject"
     },
     {
@@ -5103,6 +5373,62 @@
       "name": "swizzle",
       "typ": "MTLTextureSwizzleChannels",
       "getterName": "swizzle",
+      "readonly": true
+    },
+    {
+      "owner": "MTLVertexBufferLayoutDescriptor",
+      "name": "stride",
+      "typ": "NSUInteger",
+      "getterName": "stride",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexBufferLayoutDescriptor",
+      "name": "stepFunction",
+      "typ": "MTLVertexStepFunction",
+      "getterName": "stepFunction",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexBufferLayoutDescriptor",
+      "name": "stepRate",
+      "typ": "NSUInteger",
+      "getterName": "stepRate",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexAttributeDescriptor",
+      "name": "format",
+      "typ": "MTLVertexFormat",
+      "getterName": "format",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexAttributeDescriptor",
+      "name": "offset",
+      "typ": "NSUInteger",
+      "getterName": "offset",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexAttributeDescriptor",
+      "name": "bufferIndex",
+      "typ": "NSUInteger",
+      "getterName": "bufferIndex",
+      "readonly": false
+    },
+    {
+      "owner": "MTLVertexDescriptor",
+      "name": "layouts",
+      "typ": "MTLVertexBufferLayoutDescriptorArray *",
+      "getterName": "layouts",
+      "readonly": true
+    },
+    {
+      "owner": "MTLVertexDescriptor",
+      "name": "attributes",
+      "typ": "MTLVertexAttributeDescriptorArray *",
+      "getterName": "attributes",
       "readonly": true
     },
     {
@@ -10907,6 +11233,88 @@
           "typ": "MTLTextureSwizzleChannels"
         }
       ]
+    },
+    {
+      "owner": "MTLVertexBufferLayoutDescriptorArray",
+      "name": "objectAtIndexedSubscript",
+      "selector": "objectAtIndexedSubscript:",
+      "returnType": "MTLVertexBufferLayoutDescriptor *",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "objectAtIndexedSubscript",
+          "name": "index",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLVertexBufferLayoutDescriptorArray",
+      "name": "setObject",
+      "selector": "setObject:atIndexedSubscript:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "setObject",
+          "name": "bufferDesc",
+          "typ": "nullable MTLVertexBufferLayoutDescriptor *"
+        },
+        {
+          "label": "atIndexedSubscript",
+          "name": "index",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLVertexAttributeDescriptorArray",
+      "name": "objectAtIndexedSubscript",
+      "selector": "objectAtIndexedSubscript:",
+      "returnType": "MTLVertexAttributeDescriptor *",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "objectAtIndexedSubscript",
+          "name": "index",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLVertexAttributeDescriptorArray",
+      "name": "setObject",
+      "selector": "setObject:atIndexedSubscript:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "setObject",
+          "name": "attributeDesc",
+          "typ": "nullable MTLVertexAttributeDescriptor *"
+        },
+        {
+          "label": "atIndexedSubscript",
+          "name": "index",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLVertexDescriptor",
+      "name": "vertexDescriptor",
+      "selector": "vertexDescriptor",
+      "returnType": "MTLVertexDescriptor *",
+      "isClassMethod": true,
+      "params": []
+    },
+    {
+      "owner": "MTLVertexDescriptor",
+      "name": "reset",
+      "selector": "reset",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": []
     },
     {
       "owner": "CAMetalLayer",

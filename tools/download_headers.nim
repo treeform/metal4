@@ -20,7 +20,8 @@ const
     "MTLRenderPipeline.h",
     "MTLSampler.h",
     "MTLTexture.h",
-    "MTLTypes.h"
+    "MTLTypes.h",
+    "MTLVertexDescriptor.h"
   ]
 
   QuartzCoreHeaders = [

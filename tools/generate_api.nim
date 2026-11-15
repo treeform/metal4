@@ -21,7 +21,10 @@ const
     "MTLTextureUsage",
     "MTLCompareFunction",
     "MTLWinding",
-    "MTLCullMode"
+    "MTLCullMode",
+    "MTLVertexFormat",
+    "MTLVertexStepFunction",
+    "MTLCommandBufferStatus"
   ]
 
   TargetStructs = [
@@ -49,6 +52,11 @@ const
     "MTLRenderPipelineColorAttachmentDescriptor",
     "MTLRenderPipelineColorAttachmentDescriptorArray",
     "MTLRenderPipelineDescriptor",
+    "MTLVertexDescriptor",
+    "MTLVertexAttributeDescriptor",
+    "MTLVertexAttributeDescriptorArray",
+    "MTLVertexBufferLayoutDescriptor",
+    "MTLVertexBufferLayoutDescriptorArray",
     "MTLRenderPassAttachmentDescriptor",
     "MTLRenderPassColorAttachmentDescriptor",
     "MTLRenderPassColorAttachmentDescriptorArray",
@@ -68,6 +76,17 @@ const
     ("CAMetalLayer", "framebufferOnly"),
     ("CAMetalLayer", "drawableSize"),
     ("MTLTextureDescriptor", "usage"),
+    ("MTLCommandBuffer", "status"),
+    ("MTLCommandBuffer", "error"),
+    ("MTLVertexDescriptor", "attributes"),
+    ("MTLVertexDescriptor", "layouts"),
+    ("MTLVertexAttributeDescriptor", "format"),
+    ("MTLVertexAttributeDescriptor", "offset"),
+    ("MTLVertexAttributeDescriptor", "bufferIndex"),
+    ("MTLVertexBufferLayoutDescriptor", "stride"),
+    ("MTLVertexBufferLayoutDescriptor", "stepFunction"),
+    ("MTLVertexBufferLayoutDescriptor", "stepRate"),
+    ("MTLRenderPipelineDescriptor", "vertexDescriptor"),
     ("MTLRenderPipelineDescriptor", "vertexFunction"),
     ("MTLRenderPipelineDescriptor", "fragmentFunction"),
     ("MTLRenderPipelineDescriptor", "colorAttachments"),
@@ -112,6 +131,10 @@ const
     ("MTLCommandBuffer", "renderCommandEncoderWithDescriptor", "renderCommandEncoderWithDescriptor:"),
     ("MTLCommandBuffer", "presentDrawable", "presentDrawable:"),
     ("MTLCommandBuffer", "commit", "commit"),
+    ("MTLCommandBuffer", "waitUntilCompleted", "waitUntilCompleted"),
+    ("MTLVertexDescriptor", "vertexDescriptor", "vertexDescriptor"),
+    ("MTLVertexAttributeDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
+    ("MTLVertexBufferLayoutDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPassColorAttachmentDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPipelineColorAttachmentDescriptorArray", "objectAtIndexedSubscript", "objectAtIndexedSubscript:"),
     ("MTLRenderPassDescriptor", "renderPassDescriptor", "renderPassDescriptor"),
@@ -133,6 +156,7 @@ const
   InitClasses = [
     "CAMetalLayer",
     "MTLRenderPipelineDescriptor",
+    "MTLVertexDescriptor",
     "MTLSamplerDescriptor",
     "MTLDepthStencilDescriptor"
   ]
@@ -351,8 +375,7 @@ proc generateFunctions(ir: HeaderIr): string =
   ]
   lines.add("proc MTLCreateSystemDefaultDevice*(): MTLDevice {.")
   lines.add("  importc,")
-  lines.add("  cdecl,")
-  lines.add("  dynlib: \"/System/Library/Frameworks/Metal.framework/Metal\"")
+  lines.add("  cdecl")
   lines.add(".}")
   discard item
   result = lines.join("\n") & "\n"
@@ -482,8 +505,8 @@ proc generateSwitchboard(): string =
   result =
     Header &
     "\n" &
-    "when not defined(macosx):\n" &
-    "  {.error: \"metal4 only runs on macOS.\".}\n" &
+    "when not (defined(macosx) or defined(ios)):\n" &
+    "  {.error: \"metal4 only runs on macOS and iOS.\".}\n" &
     "\n" &
     "import metal4/[constants, types, functions, protocols]\n" &
     "export constants, types, functions, protocols\n" &

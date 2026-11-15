@@ -1,5 +1,4 @@
-import
-  windy/platforms/macos/[macdefs, objc]
+import foundations
 
 type
   Metal4Error* = object of CatchableError
