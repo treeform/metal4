@@ -23,6 +23,8 @@ jobs:
           nimby install windy pixie vmath
       - run: nim check tests/tests.nim
       - run: nim r tests/tests.nim
+      - name: Compile native GPU transfer test
+        run: nim c tests/test_texture_transfer.nim
       - name: Compile examples
         working-directory: examples
         run: |

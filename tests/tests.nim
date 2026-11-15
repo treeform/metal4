@@ -44,9 +44,66 @@ doAssert compiles(
   ).setSourceRGBBlendFactor(MTLBlendFactorOne)
 )
 
+echo "Testing renderer binding surface"
+doAssert compiles(block:
+  let
+    device = cast[MTLDevice](0)
+    command = cast[MTLCommandBuffer](0)
+    encoder = cast[MTLRenderCommandEncoder](0)
+    texture = cast[MTLTexture](0)
+    deviceName: NSString = device.name()
+    status: MTLCommandBufferStatus = command.status()
+    error: NSError = command.error()
+    width: uint = texture.width()
+    height: uint = texture.height()
+    levels: uint = texture.mipmapLevelCount()
+  command.waitUntilCompleted()
+  encoder.setFragmentBytes(nil, 0, 1)
+  texture.getBytes(nil, 4, MTLRegion(), 0)
+  let blit = command.blitCommandEncoder()
+  blit.generateMipmapsForTexture(texture)
+  let base: MTLCommandEncoder = blit
+  base.endEncoding()
+  blit.endEncoding()
+)
+
+echo "Testing native vertex and texture descriptors"
+autoreleasepool:
+  let
+    vertex = MTLVertexDescriptor.vertexDescriptor()
+    attribute = vertex.attributes().objectAtIndexedSubscript(0)
+    layout = vertex.layouts().objectAtIndexedSubscript(2)
+    texture = MTLTextureDescriptor.texture2DDescriptorWithPixelFormat(
+      MTLPixelFormatRGBA8Unorm,
+      4,
+      4,
+      true
+    )
+  doAssert not vertex.isNil
+  attribute.setFormat(MTLVertexFormatFloat2)
+  attribute.setOffset(4)
+  attribute.setBufferIndex(2)
+  layout.setStride(12)
+  layout.setStepFunction(MTLVertexStepFunctionPerVertex)
+  doAssert attribute.format() == MTLVertexFormatFloat2
+  doAssert attribute.offset() == 4
+  doAssert attribute.bufferIndex() == 2
+  doAssert layout.stride() == 12
+  doAssert layout.stepFunction() == MTLVertexStepFunctionPerVertex
+  texture.setStorageMode(MTLStorageModeShared)
+  texture.setMipmapLevelCount(3)
+  doAssert texture.storageMode() == MTLStorageModeShared
+  doAssert texture.mipmapLevelCount() == 3
+  let pipeline = MTLRenderPipelineDescriptor.alloc().init()
+  defer: cast[ID](pipeline).release()
+  pipeline.setVertexDescriptor(vertex)
+  doAssert not pipeline.vertexDescriptor().isNil
+
 echo "Testing parser snapshot content"
 let irText = readFile(root / "headers" / "ir.json")
 doAssert irText.contains("\"MTLCreateSystemDefaultDevice\"")
 doAssert irText.contains("\"CAMetalLayer\"")
+doAssert irText.contains("\"MTLVertexDescriptor\"")
+doAssert irText.contains("\"MTLBlitCommandEncoder\"")
 
 echo "metal4 smoke tests passed"

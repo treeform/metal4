@@ -19,6 +19,12 @@ type
   MTLDepthStencilState* = distinct NSObject
   MTLCommandEncoder* = distinct NSObject
   MTLRenderCommandEncoder* = distinct NSObject
+  MTLBlitCommandEncoder* = distinct NSObject
+  MTLVertexDescriptor* = distinct NSObject
+  MTLVertexBufferLayoutDescriptor* = distinct NSObject
+  MTLVertexBufferLayoutDescriptorArray* = distinct NSObject
+  MTLVertexAttributeDescriptor* = distinct NSObject
+  MTLVertexAttributeDescriptorArray* = distinct NSObject
   MTLRenderPipelineColorAttachmentDescriptor* = distinct NSObject
   MTLRenderPipelineColorAttachmentDescriptorArray* = distinct NSObject
   MTLRenderPipelineDescriptor* = distinct NSObject
