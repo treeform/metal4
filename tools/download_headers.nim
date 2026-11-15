@@ -5,6 +5,7 @@ const
   MetalHeaders = [
     "Metal.h",
     "MTLAllocation.h",
+    "MTLBlitCommandEncoder.h",
     "MTLBuffer.h",
     "MTLCommandBuffer.h",
     "MTLCommandEncoder.h",
@@ -18,6 +19,7 @@ const
     "MTLRenderCommandEncoder.h",
     "MTLRenderPass.h",
     "MTLRenderPipeline.h",
+    "MTLResource.h",
     "MTLSampler.h",
     "MTLTexture.h",
     "MTLTypes.h",

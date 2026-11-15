@@ -27,12 +27,23 @@ converter toMTLCommandEncoder*(
   ## Converts the render encoder to its command-encoder base type.
   cast[MTLCommandEncoder](encoder)
 
+converter toMTLCommandEncoder*(
+  encoder: MTLBlitCommandEncoder
+): MTLCommandEncoder =
+  ## Converts the blit encoder to its command-encoder base type.
+  cast[MTLCommandEncoder](encoder)
+
 objc:
   proc init*(self: CAMetalLayer): CAMetalLayer
   proc init*(self: MTLRenderPipelineDescriptor): MTLRenderPipelineDescriptor
-  proc init*(self: MTLVertexDescriptor): MTLVertexDescriptor
   proc init*(self: MTLSamplerDescriptor): MTLSamplerDescriptor
   proc init*(self: MTLDepthStencilDescriptor): MTLDepthStencilDescriptor
+  proc init*(self: MTLVertexDescriptor): MTLVertexDescriptor
+  proc init*(self: MTLVertexBufferLayoutDescriptor): MTLVertexBufferLayoutDescriptor
+  proc init*(self: MTLVertexAttributeDescriptor): MTLVertexAttributeDescriptor
+  proc name*(self: MTLDevice): NSString
+  proc status*(self: MTLCommandBuffer): MTLCommandBufferStatus
+  proc error*(self: MTLCommandBuffer): NSError
   proc texture*(self: CAMetalDrawable): MTLTexture
   proc layer*(self: CAMetalDrawable): CAMetalLayer
   proc device*(self: CAMetalLayer): MTLDevice
@@ -45,22 +56,27 @@ objc:
   proc setDrawableSize*(self: CAMetalLayer, x: NSSize)
   proc usage*(self: MTLTextureDescriptor): MTLTextureUsage
   proc setUsage*(self: MTLTextureDescriptor, x: MTLTextureUsage)
-  proc status*(self: MTLCommandBuffer): MTLCommandBufferStatus
-  proc error*(self: MTLCommandBuffer): NSError
-  proc attributes*(self: MTLVertexDescriptor): MTLVertexAttributeDescriptorArray
+  proc storageMode*(self: MTLTextureDescriptor): MTLStorageMode
+  proc setStorageMode*(self: MTLTextureDescriptor, x: MTLStorageMode)
+  proc mipmapLevelCount*(self: MTLTextureDescriptor): uint
+  proc setMipmapLevelCount*(self: MTLTextureDescriptor, x: uint)
+  proc width*(self: MTLTexture): uint
+  proc height*(self: MTLTexture): uint
+  proc mipmapLevelCount*(self: MTLTexture): uint
   proc layouts*(self: MTLVertexDescriptor): MTLVertexBufferLayoutDescriptorArray
-  proc format*(self: MTLVertexAttributeDescriptor): MTLVertexFormat
-  proc setFormat*(self: MTLVertexAttributeDescriptor, x: MTLVertexFormat)
-  proc offset*(self: MTLVertexAttributeDescriptor): uint
-  proc setOffset*(self: MTLVertexAttributeDescriptor, x: uint)
-  proc bufferIndex*(self: MTLVertexAttributeDescriptor): uint
-  proc setBufferIndex*(self: MTLVertexAttributeDescriptor, x: uint)
+  proc attributes*(self: MTLVertexDescriptor): MTLVertexAttributeDescriptorArray
   proc stride*(self: MTLVertexBufferLayoutDescriptor): uint
   proc setStride*(self: MTLVertexBufferLayoutDescriptor, x: uint)
   proc stepFunction*(self: MTLVertexBufferLayoutDescriptor): MTLVertexStepFunction
   proc setStepFunction*(self: MTLVertexBufferLayoutDescriptor, x: MTLVertexStepFunction)
   proc stepRate*(self: MTLVertexBufferLayoutDescriptor): uint
   proc setStepRate*(self: MTLVertexBufferLayoutDescriptor, x: uint)
+  proc format*(self: MTLVertexAttributeDescriptor): MTLVertexFormat
+  proc setFormat*(self: MTLVertexAttributeDescriptor, x: MTLVertexFormat)
+  proc offset*(self: MTLVertexAttributeDescriptor): uint
+  proc setOffset*(self: MTLVertexAttributeDescriptor, x: uint)
+  proc bufferIndex*(self: MTLVertexAttributeDescriptor): uint
+  proc setBufferIndex*(self: MTLVertexAttributeDescriptor, x: uint)
   proc vertexDescriptor*(self: MTLRenderPipelineDescriptor): MTLVertexDescriptor
   proc setVertexDescriptor*(self: MTLRenderPipelineDescriptor, x: MTLVertexDescriptor)
   proc vertexFunction*(self: MTLRenderPipelineDescriptor): MTLFunction
@@ -129,14 +145,17 @@ objc:
   proc presentDrawable*(self: MTLCommandBuffer, x: CAMetalDrawable)
   proc commit*(self: MTLCommandBuffer)
   proc waitUntilCompleted*(self: MTLCommandBuffer)
+  proc blitCommandEncoder*(self: MTLCommandBuffer): MTLBlitCommandEncoder
+  proc generateMipmapsForTexture*(self: MTLBlitCommandEncoder, x: MTLTexture)
   proc vertexDescriptor*(class: typedesc[MTLVertexDescriptor]): MTLVertexDescriptor
-  proc objectAtIndexedSubscript*(self: MTLVertexAttributeDescriptorArray, x: uint): MTLVertexAttributeDescriptor
   proc objectAtIndexedSubscript*(self: MTLVertexBufferLayoutDescriptorArray, x: uint): MTLVertexBufferLayoutDescriptor
+  proc objectAtIndexedSubscript*(self: MTLVertexAttributeDescriptorArray, x: uint): MTLVertexAttributeDescriptor
   proc objectAtIndexedSubscript*(self: MTLRenderPassColorAttachmentDescriptorArray, x: uint): MTLRenderPassColorAttachmentDescriptor
   proc objectAtIndexedSubscript*(self: MTLRenderPipelineColorAttachmentDescriptorArray, x: uint): MTLRenderPipelineColorAttachmentDescriptor
   proc renderPassDescriptor*(class: typedesc[MTLRenderPassDescriptor]): MTLRenderPassDescriptor
   proc texture2DDescriptorWithPixelFormat*(class: typedesc[MTLTextureDescriptor], x: MTLPixelFormat, width: uint, height: uint, mipmapped: bool): MTLTextureDescriptor
   proc replaceRegion*(self: MTLTexture, x: MTLRegion, mipmapLevel: uint, withBytes: pointer, bytesPerRow: uint)
+  proc getBytes*(self: MTLTexture, x: pointer, bytesPerRow: uint, fromRegion: MTLRegion, mipmapLevel: uint)
   proc endEncoding*(self: MTLCommandEncoder)
   proc setRenderPipelineState*(self: MTLRenderCommandEncoder, x: MTLRenderPipelineState)
   proc setViewport*(self: MTLRenderCommandEncoder, x: MTLViewport)
@@ -144,6 +163,7 @@ objc:
   proc setFrontFacingWinding*(self: MTLRenderCommandEncoder, x: MTLWinding)
   proc setDepthStencilState*(self: MTLRenderCommandEncoder, x: MTLDepthStencilState)
   proc setVertexBytes*(self: MTLRenderCommandEncoder, x: pointer, length: uint, atIndex: uint)
+  proc setFragmentBytes*(self: MTLRenderCommandEncoder, x: pointer, length: uint, atIndex: uint)
   proc setVertexBuffer*(self: MTLRenderCommandEncoder, x: MTLBuffer, offset: uint, atIndex: uint)
   proc setFragmentTexture*(self: MTLRenderCommandEncoder, x: MTLTexture, atIndex: uint)
   proc setFragmentSamplerState*(self: MTLRenderCommandEncoder, x: MTLSamplerState, atIndex: uint)

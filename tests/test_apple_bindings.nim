@@ -33,9 +33,11 @@ proc main() =
   attribute.setBufferIndex(0)
   layout.setStride(20)
   layout.setStepFunction(MTLVertexStepFunctionPerVertex)
+  layout.setStepRate(1)
   doAssert attribute.format() == MTLVertexFormatFloat2
   doAssert attribute.offset() == 8
   doAssert layout.stride() == 20
+  doAssert layout.stepRate() == 1
 
   let pipeline = MTLRenderPipelineDescriptor.alloc().init()
   checkNil(pipeline, "Could not create the smoke test pipeline descriptor")

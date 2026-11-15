@@ -2,8 +2,8 @@
   "sdkPath": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
   "downloadedAtUtc": "2026-03-15T20:06:39Z",
   "metalHeaders": [
-    "Metal.h",
     "MTLAllocation.h",
+    "MTLBlitCommandEncoder.h",
     "MTLBuffer.h",
     "MTLCommandBuffer.h",
     "MTLCommandEncoder.h",
@@ -17,17 +17,25 @@
     "MTLRenderCommandEncoder.h",
     "MTLRenderPass.h",
     "MTLRenderPipeline.h",
+    "MTLResource.h",
     "MTLSampler.h",
     "MTLTexture.h",
     "MTLTypes.h",
-    "MTLVertexDescriptor.h"
+    "MTLVertexDescriptor.h",
+    "Metal.h"
   ],
   "quartzCoreHeaders": [
     "CAMetalLayer.h"
   ],
-  "additionalHeaders": {
-    "MTLVertexDescriptor.h": {
-      "sdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk"
+  "additions": [
+    {
+      "sdkPath": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk",
+      "downloadedAtUtc": "2026-11-15T22:16:33Z",
+      "metalHeaders": [
+        "MTLBlitCommandEncoder.h",
+        "MTLResource.h",
+        "MTLVertexDescriptor.h"
+      ]
     }
-  }
+  ]
 }

@@ -1,6 +1,21 @@
 {
   "enums": [
     {
+      "name": "MTLBlitOption",
+      "baseType": "NSUInteger",
+      "isOptions": true,
+      "values": [
+        {
+          "name": "MTLBlitOptionNone",
+          "value": "0"
+        },
+        {
+          "name": "MTLBlitOptionDepthFromDepthStencil",
+          "value": "1 <<0, MTLBlitOptionStencilFromDepthStencil = 1 <<1, MTLBlitOptionRowLinearPVRTC = 1 <<2,"
+        }
+      ]
+    },
+    {
       "name": "MTLCommandBufferStatus",
       "baseType": "NSUInteger",
       "isOptions": false,
@@ -1773,6 +1788,150 @@
       ]
     },
     {
+      "name": "MTLPurgeableState",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLPurgeableStateKeepCurrent",
+          "value": "1"
+        },
+        {
+          "name": "MTLPurgeableStateNonVolatile",
+          "value": "2"
+        },
+        {
+          "name": "MTLPurgeableStateVolatile",
+          "value": "3"
+        },
+        {
+          "name": "MTLPurgeableStateEmpty",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "name": "MTLCPUCacheMode",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLCPUCacheModeDefaultCache",
+          "value": "0"
+        },
+        {
+          "name": "MTLCPUCacheModeWriteCombined",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "MTLStorageMode",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLStorageModeShared",
+          "value": "0"
+        },
+        {
+          "name": "MTLStorageModeManaged",
+          "value": "1"
+        },
+        {
+          "name": "MTLStorageModePrivate",
+          "value": "2"
+        },
+        {
+          "name": "MTLStorageModeMemoryless",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "name": "MTLHazardTrackingMode",
+      "baseType": "NSUInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLHazardTrackingModeDefault",
+          "value": "0"
+        },
+        {
+          "name": "MTLHazardTrackingModeUntracked",
+          "value": "1"
+        },
+        {
+          "name": "MTLHazardTrackingModeTracked",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "name": "MTLResourceOptions",
+      "baseType": "NSUInteger",
+      "isOptions": true,
+      "values": [
+        {
+          "name": "MTLResourceCPUCacheModeDefaultCache",
+          "value": "MTLCPUCacheModeDefaultCache <<MTLResourceCPUCacheModeShift, MTLResourceCPUCacheModeWriteCombined = MTLCPUCacheModeWriteCombined <<MTLResourceCPUCacheModeShift, MTLResourceStorageModeShared = MTLStorageModeShared <<MTLResourceStorageModeShift, MTLResourceStorageModeManaged = MTLStorageModeManaged <<MTLResourceStorageModeShift, MTLResourceStorageModePrivate = MTLStorageModePrivate <<MTLResourceStorageModeShift, MTLResourceStorageModeMemoryless = MTLStorageModeMemoryless <<MTLResourceStorageModeShift, MTLResourceHazardTrackingModeDefault = MTLHazardTrackingModeDefault <<MTLResourceHazardTrackingModeShift, MTLResourceHazardTrackingModeUntracked = MTLHazardTrackingModeUntracked <<MTLResourceHazardTrackingModeShift, MTLResourceHazardTrackingModeTracked = MTLHazardTrackingModeTracked <<MTLResourceHazardTrackingModeShift, MTLResourceOptionCPUCacheModeDefault = MTLResourceCPUCacheModeDefaultCache, MTLResourceOptionCPUCacheModeWriteCombined = MTLResourceCPUCacheModeWriteCombined,"
+        }
+      ]
+    },
+    {
+      "name": "MTLSparsePageSize",
+      "baseType": "NSInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLSparsePageSize16",
+          "value": "101"
+        },
+        {
+          "name": "MTLSparsePageSize64",
+          "value": "102"
+        },
+        {
+          "name": "MTLSparsePageSize256",
+          "value": "103"
+        }
+      ]
+    },
+    {
+      "name": "MTLBufferSparseTier",
+      "baseType": "NSInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLBufferSparseTierNone",
+          "value": "0"
+        },
+        {
+          "name": "MTLBufferSparseTier1",
+          "value": "1"
+        }
+      ]
+    },
+    {
+      "name": "MTLTextureSparseTier",
+      "baseType": "NSInteger",
+      "isOptions": false,
+      "values": [
+        {
+          "name": "MTLTextureSparseTierNone",
+          "value": "0"
+        },
+        {
+          "name": "MTLTextureSparseTier1",
+          "value": "1"
+        },
+        {
+          "name": "MTLTextureSparseTier2",
+          "value": "2"
+        }
+      ]
+    },
+    {
       "name": "MTLSamplerMinMagFilter",
       "baseType": "NSUInteger",
       "isOptions": false,
@@ -2520,6 +2679,11 @@
       "baseName": "NSObject"
     },
     {
+      "name": "MTLBlitCommandEncoder",
+      "kind": "protocol",
+      "baseName": "NSObject"
+    },
+    {
       "name": "MTLTextureDescriptor",
       "kind": "class",
       "baseName": "NSObject <NSCopying>"
@@ -2847,6 +3011,11 @@
     {
       "name": "MTLTileRenderPipelineColorAttachmentDescriptorArray",
       "kind": "class",
+      "baseName": "NSObject"
+    },
+    {
+      "name": "MTLResource",
+      "kind": "protocol",
       "baseName": "NSObject"
     },
     {
@@ -4928,6 +5097,69 @@
       "readonly": false
     },
     {
+      "owner": "MTLResource",
+      "name": "label",
+      "typ": "NSString *",
+      "getterName": "label",
+      "readonly": false
+    },
+    {
+      "owner": "MTLResource",
+      "name": "device",
+      "typ": "id<MTLDevice>",
+      "getterName": "device",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "cpuCacheMode",
+      "typ": "MTLCPUCacheMode",
+      "getterName": "cpuCacheMode",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "storageMode",
+      "typ": "MTLStorageMode",
+      "getterName": "storageMode",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "hazardTrackingMode",
+      "typ": "MTLHazardTrackingMode",
+      "getterName": "hazardTrackingMode",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "resourceOptions",
+      "typ": "MTLResourceOptions",
+      "getterName": "resourceOptions",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "heap",
+      "typ": "id<MTLHeap>",
+      "getterName": "heap",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "heapOffset",
+      "typ": "NSUInteger",
+      "getterName": "heapOffset",
+      "readonly": true
+    },
+    {
+      "owner": "MTLResource",
+      "name": "allocatedSize",
+      "typ": "NSUInteger",
+      "getterName": "allocatedSize",
+      "readonly": true
+    },
+    {
       "owner": "MTLSamplerDescriptor",
       "name": "minFilter",
       "typ": "MTLSamplerMinMagFilter",
@@ -5538,6 +5770,849 @@
     }
   ],
   "methods": [
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "synchronizeResource",
+      "selector": "synchronizeResource:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "synchronizeResource",
+          "name": "resource",
+          "typ": "id<MTLResource>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "synchronizeTexture",
+      "selector": "synchronizeTexture:slice:level:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "synchronizeTexture",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "slice",
+          "name": "slice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "level",
+          "name": "level",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTexture",
+      "selector": "copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTexture",
+          "name": "sourceTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "sourceSlice",
+          "name": "sourceSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceLevel",
+          "name": "sourceLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceOrigin",
+          "name": "sourceOrigin",
+          "typ": "MTLOrigin"
+        },
+        {
+          "label": "sourceSize",
+          "name": "sourceSize",
+          "typ": "MTLSize"
+        },
+        {
+          "label": "toTexture",
+          "name": "destinationTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "destinationSlice",
+          "name": "destinationSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationLevel",
+          "name": "destinationLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationOrigin",
+          "name": "destinationOrigin",
+          "typ": "MTLOrigin"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromBuffer",
+      "selector": "copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromBuffer",
+          "name": "sourceBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "sourceOffset",
+          "name": "sourceOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceBytesPerRow",
+          "name": "sourceBytesPerRow",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceBytesPerImage",
+          "name": "sourceBytesPerImage",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceSize",
+          "name": "sourceSize",
+          "typ": "MTLSize"
+        },
+        {
+          "label": "toTexture",
+          "name": "destinationTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "destinationSlice",
+          "name": "destinationSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationLevel",
+          "name": "destinationLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationOrigin",
+          "name": "destinationOrigin",
+          "typ": "MTLOrigin"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromBuffer",
+      "selector": "copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromBuffer",
+          "name": "sourceBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "sourceOffset",
+          "name": "sourceOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceBytesPerRow",
+          "name": "sourceBytesPerRow",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceBytesPerImage",
+          "name": "sourceBytesPerImage",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceSize",
+          "name": "sourceSize",
+          "typ": "MTLSize"
+        },
+        {
+          "label": "toTexture",
+          "name": "destinationTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "destinationSlice",
+          "name": "destinationSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationLevel",
+          "name": "destinationLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationOrigin",
+          "name": "destinationOrigin",
+          "typ": "MTLOrigin"
+        },
+        {
+          "label": "options",
+          "name": "options",
+          "typ": "MTLBlitOption"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTexture",
+      "selector": "copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTexture",
+          "name": "sourceTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "sourceSlice",
+          "name": "sourceSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceLevel",
+          "name": "sourceLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceOrigin",
+          "name": "sourceOrigin",
+          "typ": "MTLOrigin"
+        },
+        {
+          "label": "sourceSize",
+          "name": "sourceSize",
+          "typ": "MTLSize"
+        },
+        {
+          "label": "toBuffer",
+          "name": "destinationBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "destinationOffset",
+          "name": "destinationOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationBytesPerRow",
+          "name": "destinationBytesPerRow",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationBytesPerImage",
+          "name": "destinationBytesPerImage",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTexture",
+      "selector": "copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTexture",
+          "name": "sourceTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "sourceSlice",
+          "name": "sourceSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceLevel",
+          "name": "sourceLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceOrigin",
+          "name": "sourceOrigin",
+          "typ": "MTLOrigin"
+        },
+        {
+          "label": "sourceSize",
+          "name": "sourceSize",
+          "typ": "MTLSize"
+        },
+        {
+          "label": "toBuffer",
+          "name": "destinationBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "destinationOffset",
+          "name": "destinationOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationBytesPerRow",
+          "name": "destinationBytesPerRow",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationBytesPerImage",
+          "name": "destinationBytesPerImage",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "options",
+          "name": "options",
+          "typ": "MTLBlitOption"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "generateMipmapsForTexture",
+      "selector": "generateMipmapsForTexture:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "generateMipmapsForTexture",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "fillBuffer",
+      "selector": "fillBuffer:range:value:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "fillBuffer",
+          "name": "buffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "range",
+          "name": "range",
+          "typ": "NSRange"
+        },
+        {
+          "label": "value",
+          "name": "value",
+          "typ": "uint8_t"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTexture",
+      "selector": "copyFromTexture:sourceSlice:sourceLevel:toTexture:destinationSlice:destinationLevel:sliceCount:levelCount:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTexture",
+          "name": "sourceTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "sourceSlice",
+          "name": "sourceSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sourceLevel",
+          "name": "sourceLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "toTexture",
+          "name": "destinationTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "destinationSlice",
+          "name": "destinationSlice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "destinationLevel",
+          "name": "destinationLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "sliceCount",
+          "name": "sliceCount",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "levelCount",
+          "name": "levelCount",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTexture",
+      "selector": "copyFromTexture:toTexture:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTexture",
+          "name": "sourceTexture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "toTexture",
+          "name": "destinationTexture",
+          "typ": "id<MTLTexture>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromBuffer",
+      "selector": "copyFromBuffer:sourceOffset:toBuffer:destinationOffset:size:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromBuffer",
+          "name": "sourceBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "sourceOffset",
+          "name": "sourceOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "toBuffer",
+          "name": "destinationBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "destinationOffset",
+          "name": "destinationOffset",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "size",
+          "name": "size",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "updateFence",
+      "selector": "updateFence:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "updateFence",
+          "name": "fence",
+          "typ": "id<MTLFence>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "waitForFence",
+      "selector": "waitForFence:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "waitForFence",
+          "name": "fence",
+          "typ": "id<MTLFence>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "getTextureAccessCounters",
+      "selector": "getTextureAccessCounters:region:mipLevel:slice:resetCounters:countersBuffer:countersBufferOffset:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "getTextureAccessCounters",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "region",
+          "name": "region",
+          "typ": "MTLRegion"
+        },
+        {
+          "label": "mipLevel",
+          "name": "mipLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "slice",
+          "name": "slice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "resetCounters",
+          "name": "resetCounters",
+          "typ": "BOOL"
+        },
+        {
+          "label": "countersBuffer",
+          "name": "countersBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "countersBufferOffset",
+          "name": "countersBufferOffset",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "resetTextureAccessCounters",
+      "selector": "resetTextureAccessCounters:region:mipLevel:slice:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "resetTextureAccessCounters",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "region",
+          "name": "region",
+          "typ": "MTLRegion"
+        },
+        {
+          "label": "mipLevel",
+          "name": "mipLevel",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "slice",
+          "name": "slice",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "optimizeContentsForGPUAccess",
+      "selector": "optimizeContentsForGPUAccess:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "optimizeContentsForGPUAccess",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "optimizeContentsForGPUAccess",
+      "selector": "optimizeContentsForGPUAccess:slice:level:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "optimizeContentsForGPUAccess",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "slice",
+          "name": "slice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "level",
+          "name": "level",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "optimizeContentsForCPUAccess",
+      "selector": "optimizeContentsForCPUAccess:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "optimizeContentsForCPUAccess",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "optimizeContentsForCPUAccess",
+      "selector": "optimizeContentsForCPUAccess:slice:level:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "optimizeContentsForCPUAccess",
+          "name": "texture",
+          "typ": "id<MTLTexture>"
+        },
+        {
+          "label": "slice",
+          "name": "slice",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "level",
+          "name": "level",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "resetCommandsInBuffer",
+      "selector": "resetCommandsInBuffer:withRange:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "resetCommandsInBuffer",
+          "name": "buffer",
+          "typ": "id<MTLIndirectCommandBuffer>"
+        },
+        {
+          "label": "withRange",
+          "name": "range",
+          "typ": "NSRange"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyIndirectCommandBuffer",
+      "selector": "copyIndirectCommandBuffer:sourceRange:destination:destinationIndex:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyIndirectCommandBuffer",
+          "name": "source",
+          "typ": "id<MTLIndirectCommandBuffer>"
+        },
+        {
+          "label": "sourceRange",
+          "name": "sourceRange",
+          "typ": "NSRange"
+        },
+        {
+          "label": "destination",
+          "name": "destination",
+          "typ": "id<MTLIndirectCommandBuffer>"
+        },
+        {
+          "label": "destinationIndex",
+          "name": "destinationIndex",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "optimizeIndirectCommandBuffer",
+      "selector": "optimizeIndirectCommandBuffer:withRange:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "optimizeIndirectCommandBuffer",
+          "name": "indirectCommandBuffer",
+          "typ": "id<MTLIndirectCommandBuffer>"
+        },
+        {
+          "label": "withRange",
+          "name": "range",
+          "typ": "NSRange"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "sampleCountersInBuffer",
+      "selector": "sampleCountersInBuffer:atSampleIndex:withBarrier:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "sampleCountersInBuffer",
+          "name": "sampleBuffer",
+          "typ": "id<MTLCounterSampleBuffer>"
+        },
+        {
+          "label": "atSampleIndex",
+          "name": "sampleIndex",
+          "typ": "NSUInteger"
+        },
+        {
+          "label": "withBarrier",
+          "name": "barrier",
+          "typ": "BOOL"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "resolveCounters",
+      "selector": "resolveCounters:inRange:destinationBuffer:destinationOffset:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "resolveCounters",
+          "name": "sampleBuffer",
+          "typ": "id<MTLCounterSampleBuffer>"
+        },
+        {
+          "label": "inRange",
+          "name": "range",
+          "typ": "NSRange"
+        },
+        {
+          "label": "destinationBuffer",
+          "name": "destinationBuffer",
+          "typ": "id<MTLBuffer>"
+        },
+        {
+          "label": "destinationOffset",
+          "name": "destinationOffset",
+          "typ": "NSUInteger"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTensor",
+      "selector": "copyFromTensor:sourceOrigin:sourceDimensions:toTensor:destinationOrigin:destinationDimensions:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTensor",
+          "name": "sourceTensor",
+          "typ": "id<MTLTensor>"
+        },
+        {
+          "label": "sourceOrigin",
+          "name": "sourceOrigin",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "sourceDimensions",
+          "name": "sourceDimensions",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "toTensor",
+          "name": "destinationTensor",
+          "typ": "id<MTLTensor>"
+        },
+        {
+          "label": "destinationOrigin",
+          "name": "destinationOrigin",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "destinationDimensions",
+          "name": "destinationDimensions",
+          "typ": "MTLTensorExtents *"
+        }
+      ]
+    },
+    {
+      "owner": "MTLBlitCommandEncoder",
+      "name": "copyFromTensor",
+      "selector": "copyFromTensor:sourceOrigin:sourceDimensions:sourcePlane:toTensor:destinationOrigin:destinationDimensions:destinationPlane:",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "copyFromTensor",
+          "name": "sourceTensor",
+          "typ": "id<MTLTensor>"
+        },
+        {
+          "label": "sourceOrigin",
+          "name": "sourceOrigin",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "sourceDimensions",
+          "name": "sourceDimensions",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "sourcePlane",
+          "name": "sourcePlane",
+          "typ": "MTLTensorPlaneType"
+        },
+        {
+          "label": "toTensor",
+          "name": "destinationTensor",
+          "typ": "id<MTLTensor>"
+        },
+        {
+          "label": "destinationOrigin",
+          "name": "destinationOrigin",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "destinationDimensions",
+          "name": "destinationDimensions",
+          "typ": "MTLTensorExtents *"
+        },
+        {
+          "label": "destinationPlane",
+          "name": "destinationPlane",
+          "typ": "MTLTensorPlaneType"
+        }
+      ]
+    },
     {
       "owner": "MTLBuffer",
       "name": "contents NS_RETURNS_INNER_POINTER",
@@ -10916,6 +11991,50 @@
       "returnType": "void",
       "isClassMethod": false,
       "params": []
+    },
+    {
+      "owner": "MTLResource",
+      "name": "setPurgeableState",
+      "selector": "setPurgeableState:",
+      "returnType": "MTLPurgeableState",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "setPurgeableState",
+          "name": "state",
+          "typ": "MTLPurgeableState"
+        }
+      ]
+    },
+    {
+      "owner": "MTLResource",
+      "name": "makeAliasable",
+      "selector": "makeAliasable",
+      "returnType": "void",
+      "isClassMethod": false,
+      "params": []
+    },
+    {
+      "owner": "MTLResource",
+      "name": "isAliasable",
+      "selector": "isAliasable",
+      "returnType": "BOOL",
+      "isClassMethod": false,
+      "params": []
+    },
+    {
+      "owner": "MTLResource",
+      "name": "setOwnerWithIdentity",
+      "selector": "setOwnerWithIdentity:",
+      "returnType": "kern_return_t",
+      "isClassMethod": false,
+      "params": [
+        {
+          "label": "setOwnerWithIdentity",
+          "name": "task_id_token",
+          "typ": "task_id_token_t"
+        }
+      ]
     },
     {
       "owner": "MTLTextureDescriptor",

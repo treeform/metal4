@@ -19,9 +19,10 @@ type
   MTLCompareFunction* = uint
   MTLWinding* = uint
   MTLCullMode* = uint
+  MTLCommandBufferStatus* = uint
+  MTLStorageMode* = uint
   MTLVertexFormat* = uint
   MTLVertexStepFunction* = uint
-  MTLCommandBufferStatus* = uint
 
 const
   MTLPixelFormatInvalid*: MTLPixelFormat = 0
@@ -231,6 +232,16 @@ const
   MTLCullModeNone*: MTLCullMode = 0
   MTLCullModeFront*: MTLCullMode = 1
   MTLCullModeBack*: MTLCullMode = 2
+  MTLCommandBufferStatusNotEnqueued*: MTLCommandBufferStatus = 0
+  MTLCommandBufferStatusEnqueued*: MTLCommandBufferStatus = 1
+  MTLCommandBufferStatusCommitted*: MTLCommandBufferStatus = 2
+  MTLCommandBufferStatusScheduled*: MTLCommandBufferStatus = 3
+  MTLCommandBufferStatusCompleted*: MTLCommandBufferStatus = 4
+  MTLCommandBufferStatusError*: MTLCommandBufferStatus = 5
+  MTLStorageModeShared*: MTLStorageMode = 0
+  MTLStorageModeManaged*: MTLStorageMode = 1
+  MTLStorageModePrivate*: MTLStorageMode = 2
+  MTLStorageModeMemoryless*: MTLStorageMode = 3
   MTLVertexFormatInvalid*: MTLVertexFormat = 0
   MTLVertexFormatUChar2*: MTLVertexFormat = 1
   MTLVertexFormatUChar3*: MTLVertexFormat = 2
@@ -290,9 +301,3 @@ const
   MTLVertexStepFunctionPerInstance*: MTLVertexStepFunction = 2
   MTLVertexStepFunctionPerPatch*: MTLVertexStepFunction = 3
   MTLVertexStepFunctionPerPatchControlPoint*: MTLVertexStepFunction = 4
-  MTLCommandBufferStatusNotEnqueued*: MTLCommandBufferStatus = 0
-  MTLCommandBufferStatusEnqueued*: MTLCommandBufferStatus = 1
-  MTLCommandBufferStatusCommitted*: MTLCommandBufferStatus = 2
-  MTLCommandBufferStatusScheduled*: MTLCommandBufferStatus = 3
-  MTLCommandBufferStatusCompleted*: MTLCommandBufferStatus = 4
-  MTLCommandBufferStatusError*: MTLCommandBufferStatus = 5
