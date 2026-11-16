@@ -1,0 +1,3 @@
+nimTitle	foundations	metal4/foundations.html	module metal4/foundations		0
+nim	retain	metal4/foundations.html#retain,T	proc retain[T](value: T)		31
+nim	release	metal4/foundations.html#release,T	proc release[T](value: T)		35

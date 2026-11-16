@@ -71,7 +71,10 @@
   window*: Window
   device*: MTLDevice
   commandQueue*: MTLCommandQueue
-  view*: NSView
+  when false:
+    view*: MTKView
+  else:
+    view*: NSView
   layer*: CAMetalLayer">MetalContext</a></li>
 
     </ul>
@@ -81,12 +84,20 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">clearPass
+      <ul class="simple nested-toc-section">=copy
+  <li><a class="reference" href="#%3Dcopy%2CMetalContext%2CMetalContext" title="`=copy`(dest: var MetalContext; source: MetalContext)">`=copy`(dest: var MetalContext; source: MetalContext)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">clearPass
   <li><a class="reference" href="#clearPass%2CMetalContext%2CCAMetalDrawable%2CMTLClearColor" title="clearPass(ctx: var MetalContext; drawable: CAMetalDrawable; clear: MTLClearColor): MTLRenderPassDescriptor">clearPass(ctx: var MetalContext; drawable: CAMetalDrawable; clear: MTLClearColor): MTLRenderPassDescriptor</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">currentDrawable
   <li><a class="reference" href="#currentDrawable%2CMetalContext" title="currentDrawable(ctx: var MetalContext): CAMetalDrawable">currentDrawable(ctx: var MetalContext): CAMetalDrawable</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">destroy
+  <li><a class="reference" href="#destroy%2CMetalContext" title="destroy(ctx: var MetalContext)">destroy(ctx: var MetalContext)</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">init
@@ -127,7 +138,7 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="codes.html">codes</a>, <a class="reference external" href="constants.html">constants</a>, <a class="reference external" href="types.html">types</a>, <a class="reference external" href="functions.html">functions</a>, <a class="reference external" href="protocols.html">protocols</a>, <a class="reference external" href="extras.html">extras</a>
+    <a class="reference external" href="foundations.html">foundations</a>, <a class="reference external" href="codes.html">codes</a>, <a class="reference external" href="constants.html">constants</a>, <a class="reference external" href="types.html">types</a>, <a class="reference external" href="functions.html">functions</a>, <a class="reference external" href="protocols.html">protocols</a>, <a class="reference external" href="extras.html">extras</a>
   </dl>
 </div>
 <div class="section" id="7">
@@ -138,13 +149,16 @@
   <span class="Identifier">window</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">Window</span>
   <span class="Identifier">device</span><span class="Operator">*</span><span class="Other">:</span> <a href="types.html#MTLDevice"><span class="Identifier">MTLDevice</span></a>
   <span class="Identifier">commandQueue</span><span class="Operator">*</span><span class="Other">:</span> <a href="types.html#MTLCommandQueue"><span class="Identifier">MTLCommandQueue</span></a>
-  <span class="Identifier">view</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">NSView</span>
+  <span class="Keyword">when</span> <span class="Identifier">false</span><span class="Other">:</span>
+    <span class="Identifier">view</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">MTKView</span>
+  <span class="Keyword">else</span><span class="Other">:</span>
+    <span class="Identifier">view</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">NSView</span>
   <span class="Identifier">layer</span><span class="Operator">*</span><span class="Other">:</span> <a href="types.html#CAMetalLayer"><span class="Identifier">CAMetalLayer</span></a></pre></dt>
   <dd>
     
-    
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L7" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L7" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    Owns its command queue; destroy it after outstanding GPU work completes.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L6" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L6" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -154,7 +168,21 @@
 <div class="section" id="12">
   <h1><a class="toc-backref" href="#12">Procs</a></h1>
   <dl class="item">
-    <div id="clearPass-procs-all">
+    <div id="=copy-procs-all">
+  <div id="=copy,MetalContext,MetalContext">
+  <dt><pre><span class="Keyword">proc</span> <a href="#%3Dcopy%2CMetalContext%2CMetalContext"><span class="Identifier">`=copy`</span></a><span class="Other">(</span><span class="Identifier">dest</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a><span class="Other">;</span> <span class="Identifier">source</span><span class="Other">:</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a><span class="Other">)</span> {.
+    <span class="Identifier">error</span><span class="Other">:</span> <span class="StringLit">&quot;MetalContext owns native resources; move it instead of copying it&quot;</span>.}</pre></dt>
+  <dd>
+    
+    Prevents two contexts from releasing the same native resources.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L19" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L19" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="clearPass-procs-all">
   <div id="clearPass,MetalContext,CAMetalDrawable,MTLClearColor">
   <dt><pre><span class="Keyword">proc</span> <a href="#clearPass%2CMetalContext%2CCAMetalDrawable%2CMTLClearColor"><span class="Identifier">clearPass</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a><span class="Other">;</span> <span class="Identifier">drawable</span><span class="Other">:</span> <a href="types.html#CAMetalDrawable"><span class="Identifier">CAMetalDrawable</span></a><span class="Other">;</span>
                <span class="Identifier">clear</span><span class="Other">:</span> <a href="types.html#MTLClearColor"><span class="Identifier">MTLClearColor</span></a><span class="Other">)</span><span class="Other">:</span> <a href="types.html#MTLRenderPassDescriptor"><span class="Identifier">MTLRenderPassDescriptor</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -162,8 +190,8 @@
   <dd>
     
     Creates a clear pass descriptor for the current drawable.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L78" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L78" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L134" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L134" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -175,9 +203,23 @@
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Returns the current drawable after syncing the drawable size.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L68" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L68" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    Borrows this frame's drawable, or nil while no surface is available.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L121" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L121" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+
+  </dd>
+</div>
+
+</div>
+<div id="destroy-procs-all">
+  <div id="destroy,MetalContext">
+  <dt><pre><span class="Keyword">proc</span> <a href="#destroy%2CMetalContext"><span class="Identifier">destroy</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span>
+                                      <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Releases context-owned resources after its GPU work has completed. Call once for each initialized context; its native handles are not copied.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L23" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L23" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -186,13 +228,13 @@
 <div id="init-procs-all">
   <div id="init,MetalContext,Window,MTLPixelFormat">
   <dt><pre><span class="Keyword">proc</span> <a href="#init%2CMetalContext%2CWindow%2CMTLPixelFormat"><span class="Identifier">init</span></a><span class="Other">(</span><span class="Identifier">ctx</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a><span class="Other">;</span> <span class="Identifier">window</span><span class="Other">:</span> <span class="Identifier">Window</span><span class="Other">;</span> <span class="Identifier">device</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">MTLDevice</span><span class="Other">;</span>
-          <span class="Identifier">pixelFormat</span><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">80'u</span><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Metal4Error</span><span class="Other">]</span><span class="Other">,</span>
-    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+          <span class="Identifier">pixelFormat</span><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">80'u</span><span class="Other">)</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Metal4Error</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Initializes a Metal 4 context for a Windy window.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L26" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L26" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    Initializes a Metal context, after surface creation on iOS.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L59" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L59" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -205,8 +247,8 @@
   <dd>
     
     Creates a command buffer from the context queue.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L73" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L73" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L129" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L129" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -216,12 +258,12 @@
   <div id="newMetalContext,Window,MTLPixelFormat">
   <dt><pre><span class="Keyword">proc</span> <a href="#newMetalContext%2CWindow%2CMTLPixelFormat"><span class="Identifier">newMetalContext</span></a><span class="Other">(</span><span class="Identifier">window</span><span class="Other">:</span> <span class="Identifier">Window</span><span class="Other">;</span> <span class="Identifier">device</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">.</span><span class="Identifier">MTLDevice</span><span class="Other">;</span>
                      <span class="Identifier">pixelFormat</span><span class="Other">:</span> <a href="constants.html#MTLPixelFormat"><span class="Identifier">MTLPixelFormat</span></a> <span class="Other">=</span> <span class="DecNumber">80'u</span><span class="Other">)</span><span class="Other">:</span> <a href="#MetalContext"><span class="Identifier">MetalContext</span></a> {.
-    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Metal4Error</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Metal4Error</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    Creates a Metal 4 context for a Windy window.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L60" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L60" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    Creates a Metal context for a Windy window, ready to draw on iOS.
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L113" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L113" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -234,8 +276,8 @@
   <dd>
     
     Keeps the Metal drawable size in sync with the Windy window.
-    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L14" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
-<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L14" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
+    <a href="https://github.com/treeform/metal4/tree/master/src/metal4/context.nim#L34" class="link-seesrc" target="_blank">Source</a>&nbsp;&nbsp;
+<a href="https://github.com/treeform/metal4/edit/devel/src/metal4/context.nim#L34" class="link-seesrc" target="_blank" >Edit</a>&nbsp;&nbsp;
 
   </dd>
 </div>
@@ -251,7 +293,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-11-15 22:25:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-11-16 04:39:43 UTC</small>
       </div>
     </div>
   </div>

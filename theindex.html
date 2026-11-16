@@ -28,8 +28,12 @@
     <label for="nav-toggle" id="nav-overlay"></label>
     <div class="container">
       <h1 class="title">Index</h1>
-      Modules: <a href="metal4.html">metal4</a>, <a href="metal4/codes.html">metal4/codes</a>, <a href="metal4/constants.html">metal4/constants</a>, <a href="metal4/context.html">metal4/context</a>, <a href="metal4/extras.html">metal4/extras</a>, <a href="metal4/functions.html">metal4/functions</a>, <a href="metal4/protocols.html">metal4/protocols</a>, <a href="metal4/runtime.html">metal4/runtime</a>, <a href="metal4/types.html">metal4/types</a>.<br/><p /><h2>API symbols</h2>
-<dl><dt><a name="addSublayer" href="#addSublayer"><span>addSublayer:</span></a></dt><dd><ul class="simple">
+      Modules: <a href="metal4.html">metal4</a>, <a href="metal4/codes.html">metal4/codes</a>, <a href="metal4/constants.html">metal4/constants</a>, <a href="metal4/context.html">metal4/context</a>, <a href="metal4/extras.html">metal4/extras</a>, <a href="metal4/foundations.html">metal4/foundations</a>, <a href="metal4/functions.html">metal4/functions</a>, <a href="metal4/protocols.html">metal4/protocols</a>, <a href="metal4/runtime.html">metal4/runtime</a>, <a href="metal4/types.html">metal4/types</a>.<br/><p /><h2>API symbols</h2>
+<dl><dt><a name="%60%3Dcopy%60" href="#%60%3Dcopy%60"><span>`=copy`:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="context: proc `=copy`(dest: var MetalContext; source: MetalContext)" href="metal4/context.html#%3Dcopy%2CMetalContext%2CMetalContext">context: proc `=copy`(dest: var MetalContext; source: MetalContext)</a></li>
+          </ul></dd>
+<dt><a name="addSublayer" href="#addSublayer"><span>addSublayer:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="extras: proc addSublayer(self: CALayer; x: CALayer)" href="metal4/extras.html#addSublayer%2CCALayer%2CCALayer">extras: proc addSublayer(self: CALayer; x: CALayer)</a></li>
           </ul></dd>
@@ -126,6 +130,10 @@
 <dt><a name="destinationRGBBlendFactor" href="#destinationRGBBlendFactor"><span>destinationRGBBlendFactor:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc destinationRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor" href="metal4/protocols.html#destinationRGBBlendFactor%2CMTLRenderPipelineColorAttachmentDescriptor">protocols: proc destinationRGBBlendFactor(self: MTLRenderPipelineColorAttachmentDescriptor): MTLBlendFactor</a></li>
+          </ul></dd>
+<dt><a name="destroy" href="#destroy"><span>destroy:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="context: proc destroy(ctx: var MetalContext)" href="metal4/context.html#destroy%2CMetalContext">context: proc destroy(ctx: var MetalContext)</a></li>
           </ul></dd>
 <dt><a name="device" href="#device"><span>device:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1647,6 +1655,14 @@
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc presentDrawable(self: MTLCommandBuffer; x: CAMetalDrawable)" href="metal4/protocols.html#presentDrawable%2CMTLCommandBuffer%2CCAMetalDrawable">protocols: proc presentDrawable(self: MTLCommandBuffer; x: CAMetalDrawable)</a></li>
           </ul></dd>
+<dt><a name="release" href="#release"><span>release:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="foundations: proc release[T](value: T)" href="metal4/foundations.html#release%2CT">foundations: proc release[T](value: T)</a></li>
+          </ul></dd>
+<dt><a name="removeFromSuperlayer" href="#removeFromSuperlayer"><span>removeFromSuperlayer:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="extras: proc removeFromSuperlayer(self: CALayer)" href="metal4/extras.html#removeFromSuperlayer%2CCALayer">extras: proc removeFromSuperlayer(self: CALayer)</a></li>
+          </ul></dd>
 <dt><a name="renderCommandEncoderWithDescriptor" href="#renderCommandEncoderWithDescriptor"><span>renderCommandEncoderWithDescriptor:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc renderCommandEncoderWithDescriptor(self: MTLCommandBuffer;
@@ -1662,6 +1678,10 @@
           data-doc-search-tag="protocols: proc replaceRegion(self: MTLTexture; x: MTLRegion; mipmapLevel: uint;
               withBytes: pointer; bytesPerRow: uint)" href="metal4/protocols.html#replaceRegion%2CMTLTexture%2CMTLRegion%2Cuint%2Cpointer%2Cuint">protocols: proc replaceRegion(self: MTLTexture; x: MTLRegion; mipmapLevel: uint;
               withBytes: pointer; bytesPerRow: uint)</a></li>
+          </ul></dd>
+<dt><a name="retain" href="#retain"><span>retain:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="foundations: proc retain[T](value: T)" href="metal4/foundations.html#retain%2CT">foundations: proc retain[T](value: T)</a></li>
           </ul></dd>
 <dt><a name="rgbBlendOperation" href="#rgbBlendOperation"><span>rgbBlendOperation:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1851,6 +1871,10 @@
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc setStepFunction(self: MTLVertexBufferLayoutDescriptor; x: MTLVertexStepFunction)" href="metal4/protocols.html#setStepFunction%2CMTLVertexBufferLayoutDescriptor%2CMTLVertexStepFunction">protocols: proc setStepFunction(self: MTLVertexBufferLayoutDescriptor; x: MTLVertexStepFunction)</a></li>
           </ul></dd>
+<dt><a name="setStepRate" href="#setStepRate"><span>setStepRate:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocols: proc setStepRate(self: MTLVertexBufferLayoutDescriptor; x: uint)" href="metal4/protocols.html#setStepRate%2CMTLVertexBufferLayoutDescriptor%2Cuint">protocols: proc setStepRate(self: MTLVertexBufferLayoutDescriptor; x: uint)</a></li>
+          </ul></dd>
 <dt><a name="setStorageMode" href="#setStorageMode"><span>setStorageMode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc setStorageMode(self: MTLTextureDescriptor; x: MTLStorageMode)" href="metal4/protocols.html#setStorageMode%2CMTLTextureDescriptor%2CMTLStorageMode">protocols: proc setStorageMode(self: MTLTextureDescriptor; x: MTLStorageMode)</a></li>
@@ -1918,6 +1942,10 @@
 <dt><a name="stepFunction" href="#stepFunction"><span>stepFunction:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="protocols: proc stepFunction(self: MTLVertexBufferLayoutDescriptor): MTLVertexStepFunction" href="metal4/protocols.html#stepFunction%2CMTLVertexBufferLayoutDescriptor">protocols: proc stepFunction(self: MTLVertexBufferLayoutDescriptor): MTLVertexStepFunction</a></li>
+          </ul></dd>
+<dt><a name="stepRate" href="#stepRate"><span>stepRate:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="protocols: proc stepRate(self: MTLVertexBufferLayoutDescriptor): uint" href="metal4/protocols.html#stepRate%2CMTLVertexBufferLayoutDescriptor">protocols: proc stepRate(self: MTLVertexBufferLayoutDescriptor): uint</a></li>
           </ul></dd>
 <dt><a name="storageMode" href="#storageMode"><span>storageMode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -1995,7 +2023,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-11-15 22:25:18 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-11-16 04:39:43 UTC</small>
       </div>
     </div>
   </div>
