@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  @enum MTLPurgeableOption
  @abstract Options for setPurgeable call.
- 
+
  @constant MTLPurgeableStateNonVolatile
  The contents of this resource may not be discarded.
 
@@ -23,14 +23,14 @@ NS_ASSUME_NONNULL_BEGIN
 
  @constant MTLPurgeableStateEmpty
  The contents of this are discarded.
- 
+
  @constant MTLPurgeableStateKeepCurrent
  The purgeabelity state is not changed.
  */
 typedef NS_ENUM(NSUInteger, MTLPurgeableState)
 {
     MTLPurgeableStateKeepCurrent = 1,
-    
+
     MTLPurgeableStateNonVolatile = 2,
     MTLPurgeableStateVolatile = 3,
     MTLPurgeableStateEmpty = 4,
@@ -41,10 +41,10 @@ typedef NS_ENUM(NSUInteger, MTLPurgeableState)
  @abstract Describes what CPU cache mode is used for the CPU's mapping of a texture resource.
  @constant MTLCPUCacheModeDefaultCache
  The default cache mode for the system.
- 
+
  @constant MTLCPUCacheModeWriteCombined
  Write combined memory is optimized for resources that the CPU will write into, but never read.  On some implementations, writes may bypass caches avoiding cache pollution, and reads perform very poorly.
- 
+
  @discussion
  Applications should only investigate changing the cache mode if writing to normally cached buffers is known to cause performance issues due to cache pollution, as write combined memory can have surprising performance pitfalls.  Another approach is to use non-temporal stores to normally cached memory (STNP on ARMv8, _mm_stream_* on x86_64).
  */
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSUInteger, MTLCPUCacheMode)
  @constant MTLStorageModePrivate
  This mode allows the texture resource data to be kept entirely to GPU (or driver) private memory that will never be accessed by the CPU directly, so no
  conherency of any kind must be maintained.
- 
+
  @constant MTLStorageModeMemoryless
  This mode allows creation of resources that do not have a GPU or CPU memory backing, but do have on-chip storage for TBDR
  devices. The contents of the on-chip storage is undefined and does not persist, but its configuration is controlled by the
@@ -110,11 +110,11 @@ typedef NS_ENUM(NSUInteger, MTLHazardTrackingMode)
  Applications should only investigate changing the cache mode if writing to normally cached buffers is known to
  cause performance issues due to cache pollution, as write combined memory can have surprising performance pitfalls.
  Another approach is to use non-temporal stores to normally cached memory (STNP on ARMv8, _mm_stream_* on x86_64).
- 
+
  @constant MTLResourceCPUCacheModeWriteCombined
  Write combined memory is optimized for resources that the CPU will write into, but never read.
  On some implementations, writes may bypass caches avoiding cache pollution, and reads perform very poorly.
- 
+
  @constant MTLResourceStorageModeShared
  In this mode, CPU and device will nominally both use the same underlying memory when accessing the contents of the resource.
  However, coherency is only guaranteed at command buffer boundaries to minimize the required flushing of CPU and GPU caches.
@@ -138,12 +138,12 @@ typedef NS_ENUM(NSUInteger, MTLHazardTrackingMode)
  devices. The contents of the on-chip storage is undefined and does not persist, but its configuration is controlled by the
  MTLTexture descriptor. Textures created with MTLStorageModeMemoryless dont have an IOAccelResource at any point in their
  lifetime. The only way to populate such resource is to perform rendering operations on it. Blit operations are disallowed.
- 
+
  @constant MTLResourceHazardTrackingModeDefault
  This mode is the default for the context in which it is specified,
  which may be either MTLResourceHazardTrackingModeUntracked or MTLResourceHazardTrackingModeTracked.
  Refer to the point of use to determing the meaning of this flag.
- 
+
  @constant MTLResourceHazardTrackingModeUntracked
  In this mode, command encoder dependencies for this resource are tracked manually with MTLFence.
  This value is the default for MTLHeap and resources sub-allocated from a MTLHeap,
@@ -153,7 +153,7 @@ typedef NS_ENUM(NSUInteger, MTLHazardTrackingMode)
  In this mode, command encoder dependencies for this resource are tracked automatically.
  This value is the default for resources allocated from a MTLDevice,
  and may optionally be specified for MTLHeap and resources sub-allocated from such heaps.
- 
+
  @discussion
  Note that resource options are a property of MTLTextureDescriptor (resourceOptions), so apply to texture creation.
  they are also passed directly into MTLBuffer creation methods.
@@ -177,11 +177,11 @@ typedef NS_OPTIONS(NSUInteger, MTLResourceOptions)
     MTLResourceStorageModeManaged API_DEPRECATED("Managed storage has no effect on Apple Silicon, use Shared storage instead", macos(10.11, 27.0), macCatalyst(13.0, 27.0)) API_UNAVAILABLE(ios) = MTLStorageModeManaged << MTLResourceStorageModeShift,
     MTLResourceStorageModePrivate API_AVAILABLE(macos(10.11), ios(9.0)) = MTLStorageModePrivate << MTLResourceStorageModeShift,
     MTLResourceStorageModeMemoryless API_AVAILABLE(macos(11.0), macCatalyst(14.0), ios(10.0)) = MTLStorageModeMemoryless << MTLResourceStorageModeShift,
-    
+
     MTLResourceHazardTrackingModeDefault API_AVAILABLE(macos(10.13), ios(10.0)) = MTLHazardTrackingModeDefault << MTLResourceHazardTrackingModeShift,
     MTLResourceHazardTrackingModeUntracked API_AVAILABLE(macos(10.13), ios(10.0)) = MTLHazardTrackingModeUntracked << MTLResourceHazardTrackingModeShift,
     MTLResourceHazardTrackingModeTracked API_AVAILABLE(macos(10.15), ios(13.0)) = MTLHazardTrackingModeTracked << MTLResourceHazardTrackingModeShift,
-    
+
     // Deprecated spellings
     MTLResourceOptionCPUCacheModeDefault       API_DEPRECATED_WITH_REPLACEMENT("MTLResourceCPUCacheModeDefaultCache", macos(10.11, 13.0), ios(8.0, 16.0)) = MTLResourceCPUCacheModeDefaultCache,
     MTLResourceOptionCPUCacheModeWriteCombined API_DEPRECATED_WITH_REPLACEMENT("MTLResourceCPUCacheModeWriteCombined", macos(10.11, 13.0), ios(8.0, 16.0)) = MTLResourceCPUCacheModeWriteCombined,
@@ -204,7 +204,7 @@ typedef NS_ENUM(NSInteger, MTLBufferSparseTier)
 {
     /// Indicates that the buffer is not sparse.
     MTLBufferSparseTierNone = 0,
-    
+
     /// Indicates support for sparse buffers tier 1.
     ///
     /// Tier 1 sparse buffers allow the following:
@@ -224,7 +224,7 @@ typedef NS_ENUM(NSInteger, MTLTextureSparseTier)
 {
     /// Indicates that the texture is not sparse.
     MTLTextureSparseTierNone = 0,
-    
+
     /// Indicates support for sparse textures tier 1.
     ///
     /// Tier 1 sparse textures allow the following:
@@ -239,7 +239,7 @@ typedef NS_ENUM(NSInteger, MTLTextureSparseTier)
     /// * Reading return zero in RGB and one in alpha (A) channels (opaque black) otherwise.
     /// * Writing produces no result.
     MTLTextureSparseTier1 = 1,
-    
+
     /// Indicates support for sparse textures tier 2.
     ///
     /// In addition to the guarantees tier 1 sparse textures provide,
@@ -329,7 +329,7 @@ API_AVAILABLE(macos(10.11), ios(8.0))
 /*!
  @method makeAliasable
  @abstract Allow future heap sub-allocations to alias against this resource's memory.
- @discussion It is illegal to call this method on a non heap-based resource. 
+ @discussion It is illegal to call this method on a non heap-based resource.
  It is also illegal to call this method on texture views created from heap-based textures.
  The debug layer will raise an exception. Calling this method on textures sub-allocated
  from Buffers backed by heap memory has no effect.
@@ -341,7 +341,7 @@ API_AVAILABLE(macos(10.11), ios(8.0))
  @method isAliasable
  @abstract Returns whether future heap sub-allocations may alias against this resource's memory.
  @return YES if <st>makeAliasable</st> was previously successfully called on this resource. NO otherwise.
- If resource is sub-allocated from other resource created on the heap, isAliasable returns 
+ If resource is sub-allocated from other resource created on the heap, isAliasable returns
  aliasing state of that base resource. Also returns NO when storage mode is memoryless.
  */
 -(BOOL) isAliasable API_AVAILABLE(macos(10.13), ios(10.0));

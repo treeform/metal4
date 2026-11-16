@@ -69,6 +69,8 @@ objc:
   proc setStride*(self: MTLVertexBufferLayoutDescriptor, x: uint)
   proc stepFunction*(self: MTLVertexBufferLayoutDescriptor): MTLVertexStepFunction
   proc setStepFunction*(self: MTLVertexBufferLayoutDescriptor, x: MTLVertexStepFunction)
+  proc stepRate*(self: MTLVertexBufferLayoutDescriptor): uint
+  proc setStepRate*(self: MTLVertexBufferLayoutDescriptor, x: uint)
   proc format*(self: MTLVertexAttributeDescriptor): MTLVertexFormat
   proc setFormat*(self: MTLVertexAttributeDescriptor, x: MTLVertexFormat)
   proc offset*(self: MTLVertexAttributeDescriptor): uint

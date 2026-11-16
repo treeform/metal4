@@ -1,8 +1,6 @@
-import
-  windy/platforms/macos/[macdefs, objc],
-  codes
+import foundations, codes
 
-export macdefs, objc, codes
+export foundations, codes
 
 {.passL: "-framework Metal -framework QuartzCore".}
 

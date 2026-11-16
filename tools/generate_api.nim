@@ -90,6 +90,7 @@ const
     ("MTLVertexDescriptor", "attributes"),
     ("MTLVertexBufferLayoutDescriptor", "stride"),
     ("MTLVertexBufferLayoutDescriptor", "stepFunction"),
+    ("MTLVertexBufferLayoutDescriptor", "stepRate"),
     ("MTLVertexAttributeDescriptor", "format"),
     ("MTLVertexAttributeDescriptor", "offset"),
     ("MTLVertexAttributeDescriptor", "bufferIndex"),
@@ -388,8 +389,7 @@ proc generateFunctions(ir: HeaderIr): string =
   ]
   lines.add("proc MTLCreateSystemDefaultDevice*(): MTLDevice {.")
   lines.add("  importc,")
-  lines.add("  cdecl,")
-  lines.add("  dynlib: \"/System/Library/Frameworks/Metal.framework/Metal\"")
+  lines.add("  cdecl")
   lines.add(".}")
   discard item
   result = lines.join("\n") & "\n"
@@ -525,8 +525,8 @@ proc generateSwitchboard(): string =
   result =
     Header &
     "\n" &
-    "when not defined(macosx):\n" &
-    "  {.error: \"metal4 only runs on macOS.\".}\n" &
+    "when not (defined(macosx) or defined(ios)):\n" &
+    "  {.error: \"metal4 only runs on macOS and iOS.\".}\n" &
     "\n" &
     "import metal4/[constants, types, functions, protocols]\n" &
     "export constants, types, functions, protocols\n" &

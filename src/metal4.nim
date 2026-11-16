@@ -1,8 +1,8 @@
 # Auto-generated from vendored Apple headers — do not edit manually.
 # Regenerate with: nim r tools/generate_api.nim
 
-when not defined(macosx):
-  {.error: "metal4 only runs on macOS.".}
+when not (defined(macosx) or defined(ios)):
+  {.error: "metal4 only runs on macOS and iOS.".}
 
 import metal4/[constants, types, functions, protocols]
 export constants, types, functions, protocols
